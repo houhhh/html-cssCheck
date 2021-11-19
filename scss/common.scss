@@ -144,6 +144,44 @@ body {
                     strong {
                         font-size:20px;
                     }
+                    h1 {
+                        font-size:40px;
+                        color:cadetblue;
+                    }
+                }
+
+                .logIn {
+                    .loginGrp {
+                        border:1px solid #8b8b8b;
+                        width:16%;
+                        padding:30px 30px;
+                        margin:50px 0;
+                        .userInfo {
+                            display:flex;
+                            justify-content:space-between;
+                            .idBox {
+                                display:flex;
+                                flex-wrap:wrap;
+                                justify-content:space-between;
+                                width:calc(100% - 100px);
+                                label {
+                                    margin-top:10px;
+                                }
+                                input {
+                                    width:calc(100% - 70px);
+                                    margin-top:10px;
+                                    box-sizing:border-box;
+                                }
+                            }
+                            button {
+                                margin-top:10px;
+                                width:60px;
+                                color:#050505;
+                                
+                            }
+                        }
+                        
+                    }
                 }
                  
             }
