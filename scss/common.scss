@@ -1,0 +1,159 @@
+@charset 'utf-8';
+
+@import 'reset', 'mixin';
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800&display=swap');
+
+.html .setting, .basicHtml, .css
+strong {
+    font-size:18px;
+    font-weight:100;
+}
+.html li a {
+    display:block;
+    box-sizing:border-box;
+    padding:15px 20px;
+    transition:all 0.5s;
+    background-color:#313131;
+    
+    &:hover {
+        background-color:cadetblue;
+    }
+    
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color:#131313;
+    box-sizing:border-box;
+}
+
+
+.fontColor {
+    color:#f2f2f2;
+    
+}
+
+
+.allWrap {
+    padding:0 60px;
+    .head {
+        padding-left:50px;
+        display:flex;
+        align-items:center;
+        i {
+           
+           margin-right:30px;
+           font-size:45px;
+        }
+        h1 {
+            display:inline-block;
+            margin:60px 0;
+            font-weight:100;
+            font-size:60px;
+            text-align:center;
+            // background-color:red;
+            
+        }
+    }
+    .searchTab {
+        
+        background-color:#353535;
+        padding:16px 30px;
+        display:flex;
+        border-radius:20px 20px 0 0;
+        border-left:1px solid #505050;
+        border-top:1px solid #505050;
+        border-right:1px solid #505050;
+        align-items:center;
+        .searchGrp {
+            position:relative;
+            .searchBar {
+            
+                margin-left:30px;
+                font-size:23px;
+                padding:5px 20px;
+                @include radius(20px);
+    
+            }
+            .searchBtn {
+                position:absolute;
+                height:30px;
+                width:30px;
+                background-color:transparent;
+                top:5px;
+                right:3%;
+                
+                i {
+                    font-size:25px;
+                    color:black;
+                }
+            }
+        }
+        
+    }
+    .checkList {
+        background-color:#1f1f1f;
+        display:flex;
+        justify-content:space-between;
+        border:1px solid #505050;
+        .html {
+            width:15%;
+            // background-color:red;
+            h2 {
+                height:60px;
+                line-height:60px;
+                background-color:#2a2a2a;
+                border-bottom:1px solid #6e6e6e;
+                text-align:center;
+                font-size:30px;
+                font-weight:300;
+
+            }
+            .basicHtml {
+                
+                
+                
+            }
+            
+            
+            
+        }
+        .viewGrp {
+            flex-grow:1;
+            margin-left:30px;
+            border-left:1px solid #6e6e6e;
+            padding:10px 10px;
+            
+            .viewBox {
+                flex-grow:1;
+                overflow-y:auto;
+                max-height:1090px;
+                box-sizing:border-box;
+                ::-webkit-scrollbar-track {
+                    display:none;
+                }
+                .gitDoc {
+                    display:none;
+                    
+                    p {
+                        font-size:20px;
+                    }
+                }
+                .bStruct, .impFont, .mainNav, .logIn, .radio, .aona {
+                    display:none;
+                    strong {
+                        font-size:20px;
+                    }
+                }
+                 
+            }
+            
+            
+            // .viewBox::-webkit-scrollbar-track {
+                
+            // }
+            
+        }
+        
+    }
+}

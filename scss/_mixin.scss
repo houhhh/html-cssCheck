@@ -1,0 +1,226 @@
+@charset "utf-8";
+
+
+// 말줄임 
+
+// Default 
+@function unitCheck($x) { //2.중요 - 함수정리 사이트 https://soooprmx.com/ sass-%EB%82%B4%EC%9E%A5-%ED%95%A8%EC%88%98-%EC%A0%95%EB%A6%AC/
+//@mixin media(@width)의 width로 받은 값은 unitCheck($x)의 x에 들어가게되고 > 아래 type-of($x)로 들어가는데 뜻은 x값이 number숫자인지 확인하고 >
+//만약 if(unitless($x)의 x에 유닛 (px, em 등)과 같은 단위가 안적혀있다면 > 아래 @return $x+px의 x 에 px을 붙여서 돌려줘라 > 그러면 다시 21번째줄의 
+//최종 $width: 값으로 들어가게된다 (ex: $width: 10px;)
+    // 단위체크
+    @if(type-of($x)==number) { //type-of 숫자이고 아닌거 감별 unitless뒤에 단위 감별 (단위가 없다면)
+        @if(unitless($x)) {
+            @return $x+px;
+        }
+    }
+
+    @return $x;
+}
+
+@mixin media($width) {
+    $width: unitCheck($width);//1.mixin media($width)에 숫자를 넣으면 > unitCheck($width)에 들어가게되고 < unitCheck($width)는 곧 $width가 된다. 하지만 최종 $width: 값이 되기전에 unitCheck라는 함수를 만들었기때문에 위의 함수를 거친후에 들어온다. $width:에 들어가기전에 위에서 7번줄로간다
+    
+    @media all and (max-width:$width) {
+        @content;
+    }
+}
+
+// <script>
+//     function doSum(a,b) {
+//         let total = a + b
+//3.       document.write('더한값은' + total + '입니다.') 
+//     }
+//      여기서 document.write는 출력하라는 명령어임 하지만 화면에는 a + b값은 출력이 안되고 NaN으로 나온다 
+//      (=더한값은 NaN입니다.)그래서 ...
+
+//     doSum(10,20);
+//     이렇게 아래에 쓰면 그제서야 '더한값은' + 30 + '입니다.' = 더한값은 30입니다. 이렇게 나옴
+// </script> 여기까지 자바스크립트
+@mixin circleTest($size,$ov:null) {//null은 있으면 ov값을 비웠을때 그냥 오버플로설정을 아예 안하겠다는 뜻이고 $ov:visible 라적으면 비워뒀을때 visible을 기본값으로한다는 뜻이다. null 과 비슷한 인자로 NaN 이 있음
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    -ms-border-radius: 50%;
+    display:block;
+}
+
+@mixin fontSize($size, $row:null) {
+    $size: $size * 0.9;//글자사이즈를 픽셀로 정하면 좋지만 포토샵의 포인트로 받았을때 사이즈 계산해줌 
+    font-size: $size + px;
+    
+    
+    // @if ($size >=38) { // 글씨가 38 보다 크면 줄여라 
+    //     letter-spacing: -2.4px;
+    // }
+
+    // @else if ($size >=28) {
+    //     letter-spacing: -1px;
+    // }
+
+    // @else if ($size >=18) {
+    //     letter-spacing: -0.5px;
+    // }
+
+    // line-height 설정
+    @if ($row !=null) {// null 없다면 이라는 뜻임   != null 널이 초기값으로 안되어있으면 css 안쓰면 에러 11:44분 ~ 12:22분 moon20210817_B 12:45 moon20210817_C
+        line-height: $row;
+    }
+
+    @include media(970) {
+        $size: $size * 0.5;
+        font-size: $size + px;
+    }
+
+    @include media(600) {
+        $size: $size * 0.15;
+        font-size: $size + vw;
+    }
+
+    @include media(480) {
+        $size: $size * 1.3;
+        font-size: $size + vw;
+    }
+
+    @include media(360) {
+        $size: $size * 1.05;
+        font-size: $size + vw;
+    }
+
+    /*
+    @else {
+        $lineHeight: $size + 10 + px;
+        line-height: $lineHeight;
+    }
+    */
+}
+// 중요 
+
+@mixin abbr($w:100%) {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: $w;
+}
+
+@mixin flex($a:stretch, $j:flex-start, $wrap:nowrap) {
+    display: flex;
+    align-items: $a;
+    justify-content: $j;
+    flex-wrap: $wrap;
+    -ms-display: flex;
+    -ms-align-items: $a;
+    -ms-justify-content: $j;
+    -ms-flex-wrap: $wrap;
+
+    @content;
+}
+
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @content;
+
+}
+
+@mixin radius($r) {
+    border-radius: $r;
+    -ms-border-radius: $r;
+
+}
+
+@mixin circle($size) {
+    // 픽셀로 들어감 px 
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    -ms-border-radius: 50%;
+    display: block;
+}
+
+
+
+@mixin navIcon($n, $x, $y, $x2, $y2) {
+    &:nth-child(#{$n}) a {
+        &.active .navIcon {
+            background-position: $x2 $y2;
+        }
+
+        .navIcon {
+            background-position: $x $y;
+        }
+    }
+}
+@mixin snsIcon($n, $x, $y) {//이미지 넘버링 삽입
+    &:nth-child(#{$n}) a {
+        background-position:$x $y;
+    }
+}
+@mixin snsIcon2($n, $x, $y, $a, $d) { // 내가 만든 mixin
+    &:nth-child(#{$n}) a {
+        display:block;
+        width:$x;
+        height:$y;
+        background:url($url + $a) no-repeat;//!.no-repeat 중요함 안빼먹기
+        background-size:$d;
+    }
+}
+@mixin panelIcon($n, $w, $h, $a, $x, $y, $d) { // 내가 만든 mixin
+    &:nth-child(#{$n}) .cardList .cardIcon:before {
+        content:'';
+        display:block;
+        width:$w;
+        height:$h;
+        background:url($url + $a) no-repeat $x $y/$d;//!.no-repeat 중요함 안빼먹기
+        
+    }
+        
+}
+@mixin slide03Icon($n, $w, $h, $a, $x, $y, $d) {
+    &:nth-child(#{$n}) a .midBox i {
+        display:block;
+        height:$h;
+        width:$w;
+        margin:0 auto;
+        background:url($url + $a) no-repeat $x $y;
+        background-size:$d;
+    }
+}
+
+@mixin baseWidth($w:1160px, $mg:auto) {
+    max-width: $w;
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: $mg;
+    margin-right: $mg;
+}
+
+@mixin circle2($s, $c) { // 
+    width:$s;
+    height:$s;
+    border-radius:50%; // radius 변수를 넣었을때 래디우스는 50으로 따로 지정
+    display:block; // 블럭이랑 컬러도 같이 넣으면 따로 css 에서 넣을 필요없음
+    background-color:$c; 
+
+}
+@mixin circle3($s:30px, $c:black, $t:#fff) { // 
+    width:$s;
+    height:$s;
+    border-radius:50%; //radius 변수를 넣었을때 래디우스는 50으로 따로 지정
+    display:block; //block이랑 컬러도 같이 넣으면 따로 css 에서 넣을 필요없음
+    background-color:$c;
+    color:$t; 
+    @content; //@content자식요소안의 속성 추가 - css 에서 {}아래에 열어서 속성 넣을수 있음
+
+}
+
+@mixin clearfix {
+    &:after {
+        content:'';
+        display:block;
+        clear:both;
+    }
+}
+
+

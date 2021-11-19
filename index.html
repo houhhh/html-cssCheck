@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html&cssCheck</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/9b4d07ff5a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="allWrap fontColor">
+        <header class="head">
+            <i class="fas fa-chess-knight"></i>
+            <h1>Html & CSS Check</h1>
+        </header>
+        <section>
+            <div class="searchTab">
+                <div class="searchGrp">
+                    <input type="search" class="searchBar" placeholder="Keyword"><!--Moon 20210204 B(imp).mp4 참고-->
+                    <button type="submit" class="searchBtn"><!--moon20211116_A - 18:20 검색버튼은 a태그로 하면안됨-->
+                        <i class="far fa-compass"></i>
+                    </button>
+                </div>
+                
+            </div>
+            <div class="checkList">
+                
+                <div class="html">
+                    <h2>INITIAL</h2>
+                    <ul class="setting">
+                        <li>
+                            <a href="#">
+                                <strong class="qaList">Setting Document</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <strong class="qaList">Initial Git</strong>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                    <h2>HTML</h2>
+                    <ul class="basicHtml">
+                        <li>
+                            <a href="#">
+                                <strong class="qaList">Basic Html Structure</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <strong class="qaList">Import Font</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <strong class="qaList">Import Font-Awesome</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <strong class="qaList">Nav Manu</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <strong class="qaList">Log In</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <strong class="qaList">ScrollBar</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <strong class="qaList">Check Option(Radio)</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <strong class="qaList">Search Bar</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <strong class="qaList">"a" on "a"</strong>
+                            </a>
+                        </li>
+                    </ul>
+                
+                    <h2>CSS</h2>
+                    <ul class="css">
+                        <li>
+                            <a href="#">
+                                <strong class="qaList">Text</strong>
+                                
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                
+                                <strong class="qaList">Font-Icon</strong>
+                               
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                
+                                <strong class="qaList">Block</strong>
+                                
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                
+                                <strong class="qaList">Inline</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                
+                                <strong class="qaList">Float</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                
+                                <strong class="qaList">Flex</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="viewGrp">
+                    <div class="viewBox">
+            
+                        <div class="gitDoc">
+                            <p>
+                                프로젝트 시작하기<br>
+                                <br>
+                                1. 터미널에서 해당 프로젝트 경로 설정 잡아놓음<br>
+                                2. Git init<br>
+                                3. Git remote add origin + (html 주소)<br> 
+                                4. Git remote 쳤을때 origin 나오면 성공<br>
+                                5. Git add .<br> 
+                                6. Git commit -m “initial”<br>
+                                7. Git push origin master 하면 첫번째 펍 완료<br>
+                                <br>
+                                cd.. : go out of current path<br>
+                                cd / : go to the highest tree<br>
+                                git branch : show all workspace<br>
+                                git checkout ..(브랜지네임) : 해당 리모트로 들어가짐<br> 
+                                vim ..(파일이름+확장자) : 해당파일 실행하기<br>
+                                git log : 커밋한 히스토리 로그 보기<br>
+                                git branch -d ..(branch 네임) : 해당 리모트 삭제<br>
+                                git branch -D ..(branch 네임) : 커밋이 한번도 안된거 강제로 지우기<br>
+                                git branch ..(생성하고자하는 리모트 네임)..: 입력한 이름으로 branch 생성<br>
+                                git merge ..(가져와서 머지하려는 리모트 네임).. : 입력한 리모트의 내용을 현재의 branch에 머지<br> 
+                                +머지를 시킨후 vim으로 실행해보면 충돌일어나는 부분 선택해서 저장해달라고 하면 수정해서 저장 하면됨<br>
+                                rm -rf ..(폴더이름) : 폴더 지우기 (강제)<br>
+                                rm 파일이름 : 파일 지우기<br>
+                                git branch -a : 원격사이트에 뜨는거 확인하기<br>
+                                Git clone + (http 주소) : 최초 남의것 내려받을 때 쓰는 명령어)<br>
+                                <br>
+                                git log —decorate —graph : 히스토리 로그를 좀 더 알아보기싶게 그림으로 보여줌<br>
+                                git log ..( —로컬리모트 네임 )..—decorate —graph :<br>
+                                Q  : 로그가 나온후 다시 입력 라인으로 나가려면 q를 누르면 된다.<br>
+                                <br>
+                                원격 저장소 html 추가하기 :<br>
+                                <br>
+                                1. git init : html파일들이 들어있는 곳에 .git 파일을 생성한다. 즉 깃을 최초로 시작하기 위한명령어<br>
+                                2. git remote add origin html…..주소 붙여넣기<br>
+                                ( origin은  기본 로컬저장소 이름이고 봉통 안바꿈)<br>
+                                <br>
+                                위처럼 새로 연결을 시켰을경우 commit을 단한번도 한적이 없기 때문에 마스터도 없다<br>
+                                <br>
+                                원격 저장소의 이름은 지금부터는 확인가능하고 명령어는 git remote 라고 치면 된다.<br>
+                                origin이 뜨면 연결됐다는 뜻이고 안됐다면 안 뜬다.<br>
+                                <br>
+                                > 본격 업로드 스택에 올리기<br>
+                                <br>
+                                git add . : 수정된 파일 찾아서 업로드될 로컬 대기스택에 자동으로 올라간다.<br>
+                                git add fileName : 지정 파일 스택에 올리기<br>
+                                git status : 업로드된 파일 상태 보기 (빨간색으로 파일이뜨면 수정됐지만 로컬스택에 안올라와있고 초록색이면 다 최신상태로 로컬스택에 올라와있다는 뜻<br>
+                                <br>
+                                >커밋으로 확정된 파일 업로드하기<br>
+                                <br>
+                                git commit -m “수정메세지 적기” : 변경사항 메세지를 적고 로컬로 원격(origin)에 업로드가 된다.<br>
+                                <br>
+                                > git 사이트에 로컬에 커밋된 파일 퍼블리쉬(올리기) 하기<br>
+                                <br>
+                                git push origin master(master는 작업중인 워크스페이스) :git 사이트로 퍼블리쉬 된다.<br>
+                                <br>
+                                > 업로드를 했지만 깃에 안올라갔을때<br>
+                                Quote 인용문에 갇혔을때 나가기 : control + C<br>
+                                <br>
+
+
+
+                                사이트에 로그인이 안되있는 경우인데 그럴경우 로그인하고 다시<br>
+                                git push origin master 라고 치면 제대로 올라간다.<br>
+
+                            </p>
+                        </div>
+
+                        <div class="bStruct">
+                            <img src="./images/basicStructure.svg" alt="basicStructure">
+                        </div>
+                        <div class="impFont">
+                            <img src="./images/importFont.svg" alt="importFont">
+                        </div>
+                        <div class="mainNav">
+                            <img src="./images/mainNav.svg" alt="mainManu">
+                        </div>
+                        <div class="logIn">
+                            <br>
+                            <strong>Reference - Moon 20201206_A.mp4 / Project: moon_resom /File : loginHome.php</strong><br>
+                            <br>
+                            <img src="./images/login.svg" alt="logInStructure">
+                        </div>
+                        <div class="radio">
+                            <img src="./images/checkBox.svg" alt="logInStructure">
+                        </div>
+                        
+                        <div class="aona">
+                            <img src="./images/aona.svg" alt="structure">
+                            <img src="./images/aona2.svg" alt="htmlStructure">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <script>
+        let set1 = document.querySelectorAll('.setting a')
+        let set2 = document.querySelectorAll('.basicHtml a')
+        
+
+        let gitTxt = document.querySelector('.gitDoc')
+        let bStruct = document.querySelector('.bStruct')
+        let impFont = document.querySelector('.impFont')
+        let mainNav = document.querySelector('.mainNav')
+        let logIn = document.querySelector('.logIn')
+        let radio = document.querySelector('.radio')
+        let aona = document.querySelector('.aona')
+
+        set1[1].addEventListener('click', function() {
+            // gitTxt.classList.add('on')
+            gitTxt.style.display = 'block';
+        })
+        set2[0].addEventListener('click', function() {
+            // bStruct.classList.add('on')
+            bStruct.style.display = 'block';
+        })
+        set2[1].addEventListener('click', function() {
+            // bStruct.classList.add('on')
+            impFont.style.display = 'block';
+        })
+        set2[3].addEventListener('click', function() {
+            // bStruct.classList.add('on')
+            mainNav.style.display = 'block';
+        })
+        set2[4].addEventListener('click', function() {
+            // bStruct.classList.add('on')
+            logIn.style.display = 'block';
+        })
+        set2[6].addEventListener('click', function() {
+            // bStruct.classList.add('on')
+            radio.style.display = 'block';
+        })
+        set2[8].addEventListener('click', function() {
+            // bStruct.classList.add('on')
+            aona.style.display = 'block';
+        })
+    </script>
+</body>
+</html>
