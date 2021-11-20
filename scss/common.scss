@@ -144,6 +144,11 @@ body {
                     strong {
                         font-size:20px;
                     }
+                    .keyword {
+                        display:block;
+                        margin-top:20px;
+                        color:#696969;
+                    }
                     h2 {
                         
                         font-size:40px;
@@ -215,8 +220,12 @@ body {
                                     }
                                     .btnOpt {
                                         opacity:1;
-                                        top:12px;
+                                        top:10px;
                                         right:0;
+                                    }
+                                    .thumb .dim {
+                                        opacity:0.8;
+
                                     }
                                     
                                 }
@@ -236,7 +245,7 @@ body {
                                 a {
                                     
                                     .thumb {
-                                        
+                                        position:relative;
                                         box-sizing:border-box;
                                         overflow:hidden;
                                         width:380px;
@@ -249,6 +258,45 @@ body {
                                             background-repeat:no-repeat;
                                             background-position:center;
                                             background-size:contain;
+                                        }
+                                        .dim {
+                                            position:absolute;
+                                            left:0;
+                                            bottom:0;
+                                            height:28px;
+                                            width:100%;
+                                            background-color:black;
+                                            opacity:0;
+                                            transition:all 0.2s;
+                                            z-index:100;
+                                            box-sizing:border-box;
+                                            padding:0 0 0 260px;//?.부모에 패딩을 줘서 위치 조절을 하는게 나은가 이님 자식요소에 마진을 줘서 위치조정하는게 나은가?
+                                            display:flex;
+                                            align-items:center;
+                                            .comment {//!.inline요소의 텍스트 세로 정렬 어려움 
+                                                // background-color:red;
+                                                position:relative;
+                                                display:block;
+                                                
+                                                i {
+                                                    font-size:15px; 
+                                                    
+                                                }
+                                            }
+                                            .view {
+                                                display:block;
+                                                // background-color:red;
+                                                margin-left:10px;
+                                                
+                                                i {
+                                                    font-size:17px;
+                                                }
+                                            }
+                                            b {
+                                                // background-color:green;
+                                                font-size:14px;
+                                            
+                                            }
                                         }
                                         
                                     }
