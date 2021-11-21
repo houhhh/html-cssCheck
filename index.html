@@ -7,10 +7,19 @@
     <title>html&cssCheck</title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><!--codemirror 링크-->
     <script src="https://kit.fontawesome.com/9b4d07ff5a.js" crossorigin="anonymous"></script>
+    <script src="./lib/jquery-3.6.0.min.js"></script>
+    
+    <!-- Create a simple CodeMirror instance --> 
+    <script src="./codemirror-5.64.0/lib/codemirror.js"></script>
+    <link rel="stylesheet" href="./codemirror-5.64.0/lib/codemirror.css">
+    <script src="./codemirror-5.64.0/mode/javascript/javascript.js"></script>
+
+    <script src="./js/app.js"></script>
 </head>
 <body>
+    
     <div class="allWrap fontColor">
         <header class="head">
             <i class="fas fa-chess-knight"></i>
@@ -133,6 +142,7 @@
                             </a>
                         </li>
                     </ul>
+                    <h2>JavaScript</h2>
                 </div>
 
                 <div class="viewGrp">
@@ -208,6 +218,7 @@
                         </div>
 
                         <div class="bStruct">
+                            
                             <img src="./images/basicStructure.svg" alt="basicStructure">
                         </div>
                         <div class="impFont">
@@ -221,7 +232,30 @@
                             <strong>Reference - Moon 20201206_A.mp4 / Project: moon_resom / File : loginHome.php</strong>
                             
                             <h2>Log In Html Form</h2>
-            
+                            
+                            <div class="grid-container">
+                                <div class="code-area">
+                                    <div class="code-area-header">
+                                        <h1>Editor</h1>
+                                        <button>run</button>
+                                    </div>
+                                    <textarea class="codemirror-textarea"></textarea>
+                                </div>
+                                
+                            </div> 
+                            <div class="grid-container">
+                                <div class="code-area">
+                                    <div class="code-area-header">
+                                        <h1>shell</h1>
+                                        <button>clear</button>
+                                    </div>
+                                    <textarea class="codemirror-textarea"></textarea>
+                                </div>
+                                
+                            </div>
+                               
+                            
+
                             <div class="loginGrp">
                                 <form action="" method="GET">
                                     <fieldset>
