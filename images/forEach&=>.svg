@@ -52,10 +52,16 @@
             <text x="475.83px" y="688.875px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:20px;fill:rgb(255,0,0);">따옴표를</text>
             <text x="550.586px" y="688.875px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:20px;fill:rgb(255,0,0);">써야함</text>
         </g>
-        <g transform="matrix(1,0,0,1,85.3935,28.4742)">
-            <text x="401.073px" y="668.221px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;fill:rgb(255,0,0);">function()</text>
-            <text x="489.999px" y="668.221px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:20px;fill:rgb(255,0,0);">을</text>
-            <text x="512.855px" y="668.221px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:20px;fill:rgb(255,0,0);">쓰는방식</text>
+        <g transform="matrix(1,0,0,1,152.241,43.0254)">
+            <text x="401.073px" y="668.221px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;fill:rgb(135,255,228);">1. function()</text>
+            <text x="512.235px" y="668.221px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:20px;fill:rgb(135,255,228);">을</text>
+            <text x="535.092px" y="668.221px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:20px;fill:rgb(135,255,228);">쓰는방식</text>
+        </g>
+        <g transform="matrix(1,0,0,1,124.622,193.289)">
+            <text x="401.073px" y="668.221px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:15px;fill:rgb(135,255,228);">2.  function()</text>
+            <text x="488.612px" y="668.221px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:15px;fill:rgb(135,255,228);">을</text>
+            <text x="505.754px" y="668.221px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:15px;fill:rgb(135,255,228);">쓰지않고</text>
+            <text x="561.822px" y="668.221px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:15px;fill:rgb(135,255,228);">줄여쓰는방식</text>
         </g>
         <g transform="matrix(1,0,0,1,-36.5519,275.802)">
             <text x="401.073px" y="668.221px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:20px;fill:rgb(255,0,0);">파라미터가</text>
@@ -88,6 +94,12 @@
     </g>
     <g transform="matrix(1,0,0,0.94316,0,196.496)">
         <rect x="21.546" y="64.705" width="102.673" height="94.767" style="fill:none;stroke:rgb(0,249,31);stroke-width:1.03px;"/>
+    </g>
+    <g transform="matrix(6.10737,0,0,1.15403,10.7887,916.088)">
+        <rect x="21.546" y="64.705" width="102.673" height="94.767" style="fill:none;stroke:rgb(0,249,31);stroke-width:0.23px;"/>
+    </g>
+    <g transform="matrix(6.17791,0,0,1.38172,8.88231,1027.89)">
+        <rect x="21.546" y="64.705" width="102.673" height="94.767" style="fill:none;stroke:rgb(0,249,31);stroke-width:0.22px;"/>
     </g>
     <g transform="matrix(1,0,0,0.250067,-1.13318,339.129)">
         <rect x="21.546" y="64.705" width="102.673" height="94.767" style="fill:none;stroke:rgb(249,236,0);stroke-width:1.37px;"/>
