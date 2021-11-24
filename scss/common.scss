@@ -3,7 +3,7 @@
 @import 'reset', 'mixin';
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800&display=swap');
 
-.html .setting, .basicHtml, .css
+.html .setting, .basicHtml, .css, .java
 strong {
     font-size:18px;
     font-weight:100;
@@ -139,7 +139,7 @@ body {
                         font-size:20px;
                     }
                 }
-                .bStruct, .impFont, .mainNav, .logIn, .radio, .aona {
+                .bStruct, .impFont, .mainNav, .logIn, .radio, .aona, .classAdd, .forEach, .forEachShort {
                     display:none;
                     strong {
                         font-size:20px;
