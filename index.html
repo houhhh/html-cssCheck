@@ -176,72 +176,121 @@
                     <div class="viewBox">
             
                         <div class="gitDoc">
+                            
+                            <div class="hotCommand">
+                                <div class="initialP">
+                                    <h3>원격 저장소 html 추가하기</h3>
+                                    <ul class="initialList">
+                                        <li>1. 터미널에서 해당 프로젝트 경로 설정 잡아놓음</li>
+                                        <li>2. Git init</li>
+                                        <li>3. Git remote add origin + (html 주소)</li>
+                                        <li>4. Git remote 쳤을때 origin 나오면 성공</li>
+                                        <li>5. Git add .</li>
+                                        <li>6. Git commit -m “initial”</li>
+                                        <li>7. Git push origin master 하면 첫번째 펍 완료</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="gitCommand">
+                                    <h3>git 명령어</h3>
+                                    
+                                    <dl class="gitComList">
+                                        <dt>cd..</dt>
+                                        <dd>go out of current path</dd>
+        
+                                        <dt>cd /</dt>
+                                        <dd>go to the highest tree</dd>
+        
+                                        <dt>git branch</dt>
+                                        <dd>show all workspace</dd>
+                                        
+                                        <dt>git checkout ..(브랜지네임)</dt>
+                                        <dd>해당 리모트로 들어가짐</dd>
+        
+                                        <dt>vim ..(파일이름+확장자)</dt>
+                                        <dd>해당파일 실행하기</dd>
+        
+                                        <dt>git log</dt>
+                                        <dd>커밋한 히스토리 로그 보기</dd>
+        
+                                        <dt>git branch -d ..(branch 네임)</dt>
+                                        <dd>해당 리모트 삭제</dd>
+        
+                                        <dt>git branch -D ..(branch 네임)</dt>
+                                        <dd>커밋이 한번도 안된거 강제로 지우기</dd>
+        
+                                        <dt>git branch ..(생성하고자하는 리모트 네임)..</dt>
+                                        <dd>입력한 이름으로 branch 생성</dd>
+        
+                                        <dt>git merge ..(가져와서 머지하려는 리모트 네임)..</dt>
+                                        <dd>입력한 리모트의 내용을 현재의 branch에 머지(+머지를 시킨후 vim으로 실행해보면 충돌일어나는 부분 선택해서 저장해달라고 하면 수정해서 저장 하면됨)</dd>
+        
+                                        <dt>rm -rf ..(폴더이름)</dt>
+                                        <dd>폴더 지우기 (강제)</dd>
+        
+                                        <dt>rm 파일이름</dt>
+                                        <dd>파일 지우기</dd>
+        
+                                        <dt>git branch -a</dt>
+                                        <dd>원격사이트에 뜨는거 확인하기</dd>
+        
+                                        <dt>Git clone + (http 주소)</dt>
+                                        <dd>최초 남의것 내려받을 때 쓰는 명령어</dd>
+        
+                                        <dt>git log —decorate —graph</dt>
+                                        <dd>히스토리 로그를 좀 더 알아보기싶게 그림으로 보여줌</dd>
+        
+                                        <dt>git log ..( —로컬리모트 네임 )..—decorate —graph</dt>
+                                        <dd>로그가 그래프로 나옴</dd>
+        
+                                        <dt>q</dt>
+                                        <dd>로그가 나온후 다시 입력 라인으로 나가려면 q를 누르면 된다.</dd>
+        
+                                    </dl>
+                                    
+                                    
+                                    
+                                </div>
+                                
+                            </div>
+                            
+                            
                             <p>
-                                프로젝트 시작하기<br>
-                                <br>
-                                1. 터미널에서 해당 프로젝트 경로 설정 잡아놓음<br>
-                                2. Git init<br>
-                                3. Git remote add origin + (html 주소)<br> 
-                                4. Git remote 쳤을때 origin 나오면 성공<br>
-                                5. Git add .<br> 
-                                6. Git commit -m “initial”<br>
-                                7. Git push origin master 하면 첫번째 펍 완료<br>
-                                <br>
-                                cd.. : go out of current path<br>
-                                cd / : go to the highest tree<br>
-                                git branch : show all workspace<br>
-                                git checkout ..(브랜지네임) : 해당 리모트로 들어가짐<br> 
-                                vim ..(파일이름+확장자) : 해당파일 실행하기<br>
-                                git log : 커밋한 히스토리 로그 보기<br>
-                                git branch -d ..(branch 네임) : 해당 리모트 삭제<br>
-                                git branch -D ..(branch 네임) : 커밋이 한번도 안된거 강제로 지우기<br>
-                                git branch ..(생성하고자하는 리모트 네임)..: 입력한 이름으로 branch 생성<br>
-                                git merge ..(가져와서 머지하려는 리모트 네임).. : 입력한 리모트의 내용을 현재의 branch에 머지<br> 
-                                +머지를 시킨후 vim으로 실행해보면 충돌일어나는 부분 선택해서 저장해달라고 하면 수정해서 저장 하면됨<br>
-                                rm -rf ..(폴더이름) : 폴더 지우기 (강제)<br>
-                                rm 파일이름 : 파일 지우기<br>
-                                git branch -a : 원격사이트에 뜨는거 확인하기<br>
-                                Git clone + (http 주소) : 최초 남의것 내려받을 때 쓰는 명령어)<br>
-                                <br>
-                                git log —decorate —graph : 히스토리 로그를 좀 더 알아보기싶게 그림으로 보여줌<br>
-                                git log ..( —로컬리모트 네임 )..—decorate —graph :<br>
-                                Q  : 로그가 나온후 다시 입력 라인으로 나가려면 q를 누르면 된다.<br>
-                                <br>
-                                원격 저장소 html 추가하기 :<br>
-                                <br>
-                                1. git init : html파일들이 들어있는 곳에 .git 파일을 생성한다. 즉 깃을 최초로 시작하기 위한명령어<br>
-                                2. git remote add origin html…..주소 붙여넣기<br>
-                                ( origin은  기본 로컬저장소 이름이고 봉통 안바꿈)<br>
-                                <br>
-                                위처럼 새로 연결을 시켰을경우 commit을 단한번도 한적이 없기 때문에 마스터도 없다<br>
-                                <br>
-                                원격 저장소의 이름은 지금부터는 확인가능하고 명령어는 git remote 라고 치면 된다.<br>
-                                origin이 뜨면 연결됐다는 뜻이고 안됐다면 안 뜬다.<br>
-                                <br>
-                                > 본격 업로드 스택에 올리기<br>
-                                <br>
-                                git add . : 수정된 파일 찾아서 업로드될 로컬 대기스택에 자동으로 올라간다.<br>
-                                git add fileName : 지정 파일 스택에 올리기<br>
-                                git status : 업로드된 파일 상태 보기 (빨간색으로 파일이뜨면 수정됐지만 로컬스택에 안올라와있고 초록색이면 다 최신상태로 로컬스택에 올라와있다는 뜻<br>
-                                <br>
-                                >커밋으로 확정된 파일 업로드하기<br>
-                                <br>
-                                git commit -m “수정메세지 적기” : 변경사항 메세지를 적고 로컬로 원격(origin)에 업로드가 된다.<br>
-                                <br>
-                                > git 사이트에 로컬에 커밋된 파일 퍼블리쉬(올리기) 하기<br>
-                                <br>
-                                git push origin master(master는 작업중인 워크스페이스) :git 사이트로 퍼블리쉬 된다.<br>
-                                <br>
-                                > 업로드를 했지만 깃에 안올라갔을때<br>
-                                Quote 인용문에 갇혔을때 나가기 : control + C<br>
-                                <br>
-
-
-
-                                사이트에 로그인이 안되있는 경우인데 그럴경우 로그인하고 다시<br>
-                                git push origin master 라고 치면 제대로 올라간다.<br>
-
+                                위처럼 새로 연결을 시켰을경우 commit을 단한번도 한적이 없기 때문에 마스터도 없다
+                                원격 저장소의 이름은 지금부터는 확인가능하고 명령어는 git remote 라고 치면 된다.
+                                origin이 뜨면 연결됐다는 뜻이고 안됐다면 안 뜬다.
                             </p>
+                            
+                            <h3>본격 업로드 스택에 올리기</h3>
+
+                            <dl>
+                                <dt>1. git add .</dt>
+                                <dd>수정된 파일 찾아서 업로드될 로컬 대기스택에 자동으로 올라간다.</dd>
+
+                                <dt>2 .git status</dt>
+                                <dd>업로드된 파일 상태 보기 (빨간색으로 파일이뜨면 수정됐지만 로컬스택에 안올라와있고 초록색이면 다 최신상태로 로컬스택에 올라와있다는 뜻</dd>
+
+                                <dt>3 .git commit -m "(수정된 내용 설명 적기)"</dt>
+                                <dd>변경사항 메세지를 적고 로컬로 원격(origin)에 업로드가 된다.</dd>
+                                
+                                <dt>4. git push origin master(master는 작업중인 워크스페이스)</dt>
+                                <dd>git 사이트로 퍼블리쉬 된다.</dd>
+
+                                <dt>+ git add fileName(지정 파일 올리기)</dt>
+                                <dd>지정 파일 스택에 올리기</dd>
+
+                                <dt>control + C</dt>
+                                <dd>Quote 인용문에 갇혔을때 나가기</dd>
+                                
+                            </dl>
+                            
+                            <p>
+                                사이트에 로그인이 안되있는 경우인데 그럴경우 로그인하고 다시 git push origin master 라고 치면 제대로 올라간다.
+                            </p>
+
+                            
+
+                            
                         </div>
 
                         <div class="bStruct">

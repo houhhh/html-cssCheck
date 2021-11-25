@@ -132,14 +132,8 @@ body {
                 ::-webkit-scrollbar-track {
                     display:none;
                 }
-                .gitDoc {
-                    display:none;
-                    
-                    p {
-                        font-size:20px;
-                    }
-                }
-                .bStruct, .impFont, .mainNav, .logIn, .radio, .aona, .classAdd, .forEach, .forEachShort, .ifIncludes {
+                
+                .gitDoc, .bStruct, .impFont, .mainNav, .logIn, .radio, .aona, .classAdd, .forEach, .forEachShort, .ifIncludes {
                     display:none;
                     strong {
                         font-size:20px;
@@ -154,6 +148,60 @@ body {
                         font-size:40px;
                         color:cadetblue;
                         margin-top:60px;
+                    }
+                }
+                .gitDoc {
+                    
+                    .hotCommand {
+                        display:flex;
+                        justify-content:space-between;
+                        .initialP h3, .gitCommand h3 {
+                            // background-color:black;
+                            font-size:25px;
+                            margin:20px 0;
+                            color:cadetblue;
+                            text-align:center;
+                        }
+                        .initialP {
+                            // background-color:red;
+                            flex-shrink:0;
+                            margin-right:15px;
+                            
+                            .initialList {
+                                
+                                li {
+                                    padding:10px 0;
+                                }
+                            }
+                            
+                        }
+                        .gitCommand {
+                            
+                            .gitComList {
+                                display:flex;
+                                // background-color:blue;
+                                flex-wrap:wrap;
+                                justify-content:flex-end;
+                                
+                                dt {
+                                    width:200px;
+                                    flex-shrink:0;
+                                    padding:10px 30px 10px 0;
+                                    border-right:1px solid #626262;
+                                    border-bottom:1px solid #626262;
+                                    text-align:center;
+                                    
+                                    
+                                }
+                                dd {
+                                    width:calc(100% - 400px);
+                                    text-align:center;
+                                    padding:10px 0;
+                                    border-bottom:1px solid #626262;
+                                }
+                            }
+                        }
+                        
                     }
                 }
 
