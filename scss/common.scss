@@ -156,6 +156,7 @@ body {
                 .gitDoc {
                     
                     .hotCommand {
+                        margin-top:30px;
                         display:flex;
                         justify-content:space-between;
                         .initialP h3, .gitCommand h3 {
@@ -193,12 +194,10 @@ body {
                                     border-right:1px solid #626262;
                                     border-bottom:1px solid #626262;
                                     border-left:1px solid #626262;
+                                    
                                     text-align:center;
-                                    &:first-child {
-                                        background-color:cornflowerblue;
-                                        border-right:1px solid #626262;
-                                        border-left:none;
-                                    }
+                                    background-color:rgba(73, 114, 175, 0.2);
+                                    
                                 }
                                 
                                 dd {
@@ -207,10 +206,16 @@ body {
                                     padding:10px 0;
                                     border-right:1px solid #626262;
                                     border-bottom:1px solid #626262;
-                                    &:first-child {
-                                        background-color:cornflowerblue;
-                                    }
+                                    
+                                    // &:first-child {
+                                    //     background-color:cornflowerblue;
+                                    // }
                                 }
+                                // dt, dd:first-child {
+                                //     background-color:rgba(73, 114, 175, 0.2);
+                                //     border-right:1px solid #626262;
+                                //     border-top:
+                                // }
                             }
                         }
                         
