@@ -248,6 +248,12 @@
         
                                         <dt>q</dt>
                                         <dd>로그가 나온후 다시 입력 라인으로 나가려면 q를 누르면 된다.</dd>
+
+                                        <dt>control + C</dt>
+                                        <dd>Quote 인용문에 갇혔을때 나가기</dd>
+
+                                        <dt>+ git add fileName(지정 파일 올리기)</dt>
+                                        <dd>지정 파일 스택에 올리기</dd>
         
                                     </dl>
                                     
@@ -264,32 +270,37 @@
                                 origin이 뜨면 연결됐다는 뜻이고 안됐다면 안 뜬다.
                             </p>
                             
-                            <h3>본격 업로드 스택에 올리기</h3>
+                            <div class="practical">
+                                <h3>정리 하기</h3>
 
-                            <dl>
-                                <dt>1. git add .</dt>
-                                <dd>수정된 파일 찾아서 업로드될 로컬 대기스택에 자동으로 올라간다.</dd>
+                                <dl>
+                                    <dt>1. git add .</dt>
+                                    <dd>수정된 파일 찾아서 업로드될 로컬 대기스택에 자동으로 올라간다.</dd>
 
-                                <dt>2 .git status</dt>
-                                <dd>업로드된 파일 상태 보기 (빨간색으로 파일이뜨면 수정됐지만 로컬스택에 안올라와있고 초록색이면 다 최신상태로 로컬스택에 올라와있다는 뜻</dd>
+                                    <dt>2 .git status</dt>
+                                    <dd>업로드된 파일 상태 보기 (빨간색으로 파일이뜨면 수정됐지만 로컬스택에 안올라와있고 초록색이면 다 최신상태로 로컬스택에 올라와있다는 뜻</dd>
 
-                                <dt>3 .git commit -m "(수정된 내용 설명 적기)"</dt>
-                                <dd>변경사항 메세지를 적고 로컬로 원격(origin)에 업로드가 된다.</dd>
+                                    <dt>3 .git commit -m "(수정된 내용 설명 적기)"</dt>
+                                    <dd>변경사항 메세지를 적고 로컬로 원격(origin)에 업로드가 된다.</dd>
+                                    
+                                    <dt>4. git push origin master(master는 작업중인 워크스페이스)</dt>
+                                    <dd>git 사이트로 퍼블리쉬 된다.</dd>
+
+                                    
+
+                                    
+                                    
+                                </dl>
+                                <div class="tip">
+                                    <h3>TIP</h3>
+
+                                    <p>
+                                        사이트에 로그인이 안되있는 경우인데 그럴경우 로그인하고 다시 git push origin master 라고 치면 제대로 올라간다.
+                                    </p>
+                                </div>
                                 
-                                <dt>4. git push origin master(master는 작업중인 워크스페이스)</dt>
-                                <dd>git 사이트로 퍼블리쉬 된다.</dd>
-
-                                <dt>+ git add fileName(지정 파일 올리기)</dt>
-                                <dd>지정 파일 스택에 올리기</dd>
-
-                                <dt>control + C</dt>
-                                <dd>Quote 인용문에 갇혔을때 나가기</dd>
-                                
-                            </dl>
+                            </div>
                             
-                            <p>
-                                사이트에 로그인이 안되있는 경우인데 그럴경우 로그인하고 다시 git push origin master 라고 치면 제대로 올라간다.
-                            </p>
 
                             
 
