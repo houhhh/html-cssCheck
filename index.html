@@ -20,7 +20,6 @@
     <script src="./codemirror-5.64.0/lib/codemirror.js"></script>
     <link rel="stylesheet" href="./codemirror-5.64.0/lib/codemirror.css">
     <script src="./codemirror-5.64.0/mode/javascript/javascript.js"></script>
-
     <script src="./js/app.js"></script> -->
 </head>
 <body>
@@ -174,476 +173,523 @@
 
                 <div class="viewGrp">
                     <div class="viewBox">
-            
-                        <div class="gitDoc">
+                        <ul class="initial">
+                            <li class="tabGrp"><!-- li를 잡으면 div 안에있는 li요소까지 다 잡음 해결책? -->
+                                <div class="content gitDoc"><!-- === gitHotkey === -->
                             
-                            <div class="hotCommand">
-                                <div class="initialP">
-                                    <h3>원격 저장소 html 추가하기</h3>
-                                    <ul class="initialList">
-                                        <li>1. 터미널에서 해당 프로젝트 경로 설정 잡아놓음</li>
-                                        <li>2. Git init</li>
-                                        <li>3. Git remote add origin + (html 주소)</li>
-                                        <li>4. Git remote 쳤을때 origin 나오면 성공</li>
-                                        <li>5. Git add .</li>
-                                        <li>6. Git commit -m “initial”</li>
-                                        <li>7. Git push origin master 하면 첫번째 펍 완료</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="gitCommand">
-                                    
-                                    
-                                    <dl class="gitComList">
-                                        <dt>COMMAND LIST</dt>
-                                        <dd></dd>
-
-                                        <dt>cd..</dt>
-                                        <dd>go out of current path</dd>
-        
-                                        <dt>cd /</dt>
-                                        <dd>go to the highest tree</dd>
-        
-                                        <dt>git branch</dt>
-                                        <dd>show all workspace</dd>
+                                    <div class="hotCommand">
+                                        <div class="initialP">
+                                            <h3>원격 저장소 html 추가하기</h3>
+                                            <ul class="initialList">
+                                                <li>1. 터미널에서 해당 프로젝트 경로 설정 잡아놓음</li>
+                                                <li>2. Git init</li>
+                                                <li>3. Git remote add origin + (html 주소)</li>
+                                                <li>4. Git remote 쳤을때 origin 나오면 성공</li>
+                                                <li>5. Git add .</li>
+                                                <li>6. Git commit -m “initial”</li>
+                                                <li>7. Git push origin master 하면 첫번째 펍 완료</li>
+                                            </ul>
+                                        </div>
                                         
-                                        <dt>git checkout ..(브랜지네임)</dt>
-                                        <dd>해당 리모트로 들어가짐</dd>
+                                        <div class="gitCommand">
+                                            
+                                            
+                                            <dl class="gitComList">
+                                                <dt>COMMAND LIST</dt>
+                                                <dd></dd>
         
-                                        <dt>vim ..(파일이름+확장자)</dt>
-                                        <dd>해당파일 실행하기</dd>
+                                                <dt>cd..</dt>
+                                                <dd>go out of current path</dd>
+                
+                                                <dt>cd /</dt>
+                                                <dd>go to the highest tree</dd>
+                
+                                                <dt>git branch</dt>
+                                                <dd>show all workspace</dd>
+                                                
+                                                <dt>git checkout ..(브랜지네임)</dt>
+                                                <dd>해당 리모트로 들어가짐</dd>
+                
+                                                <dt>vim ..(파일이름+확장자)</dt>
+                                                <dd>해당파일 실행하기</dd>
+                
+                                                <dt>git log</dt>
+                                                <dd>커밋한 히스토리 로그 보기</dd>
+                
+                                                <dt>git branch -d ..(branch 네임)</dt>
+                                                <dd>해당 리모트 삭제</dd>
+                
+                                                <dt>git branch -D ..(branch 네임)</dt>
+                                                <dd>커밋이 한번도 안된거 강제로 지우기</dd>
+                
+                                                <dt>git branch ..(생성하고자하는 리모트 네임)..</dt>
+                                                <dd>입력한 이름으로 branch 생성</dd>
+                
+                                                <dt>git merge ..(가져와서 머지하려는 리모트 네임)..</dt>
+                                                <dd>입력한 리모트의 내용을 현재의 branch에 머지(+머지를 시킨후 vim으로 실행해보면 충돌일어나는 부분 선택해서 저장해달라고 하면 수정해서 저장 하면됨)</dd>
+                
+                                                <dt>rm -rf ..(폴더이름)</dt>
+                                                <dd>폴더 지우기 (강제)</dd>
+                
+                                                <dt>rm 파일이름</dt>
+                                                <dd>파일 지우기</dd>
+                
+                                                <dt>git branch -a</dt>
+                                                <dd>원격사이트에 뜨는거 확인하기</dd>
+                
+                                                <dt>Git clone + (http 주소)</dt>
+                                                <dd>최초 남의것 내려받을 때 쓰는 명령어</dd>
+                
+                                                <dt>git log —decorate —graph</dt>
+                                                <dd>히스토리 로그를 좀 더 알아보기싶게 그림으로 보여줌</dd>
+                
+                                                <dt>git log ..( —로컬리모트 네임 )..—decorate —graph</dt>
+                                                <dd>로그가 그래프로 나옴</dd>
+                
+                                                <dt>q</dt>
+                                                <dd>로그가 나온후 다시 입력 라인으로 나가려면 q를 누르면 된다.</dd>
         
-                                        <dt>git log</dt>
-                                        <dd>커밋한 히스토리 로그 보기</dd>
+                                                <dt>control + C</dt>
+                                                <dd>Quote 인용문에 갇혔을때 나가기</dd>
         
-                                        <dt>git branch -d ..(branch 네임)</dt>
-                                        <dd>해당 리모트 삭제</dd>
-        
-                                        <dt>git branch -D ..(branch 네임)</dt>
-                                        <dd>커밋이 한번도 안된거 강제로 지우기</dd>
-        
-                                        <dt>git branch ..(생성하고자하는 리모트 네임)..</dt>
-                                        <dd>입력한 이름으로 branch 생성</dd>
-        
-                                        <dt>git merge ..(가져와서 머지하려는 리모트 네임)..</dt>
-                                        <dd>입력한 리모트의 내용을 현재의 branch에 머지(+머지를 시킨후 vim으로 실행해보면 충돌일어나는 부분 선택해서 저장해달라고 하면 수정해서 저장 하면됨)</dd>
-        
-                                        <dt>rm -rf ..(폴더이름)</dt>
-                                        <dd>폴더 지우기 (강제)</dd>
-        
-                                        <dt>rm 파일이름</dt>
-                                        <dd>파일 지우기</dd>
-        
-                                        <dt>git branch -a</dt>
-                                        <dd>원격사이트에 뜨는거 확인하기</dd>
-        
-                                        <dt>Git clone + (http 주소)</dt>
-                                        <dd>최초 남의것 내려받을 때 쓰는 명령어</dd>
-        
-                                        <dt>git log —decorate —graph</dt>
-                                        <dd>히스토리 로그를 좀 더 알아보기싶게 그림으로 보여줌</dd>
-        
-                                        <dt>git log ..( —로컬리모트 네임 )..—decorate —graph</dt>
-                                        <dd>로그가 그래프로 나옴</dd>
-        
-                                        <dt>q</dt>
-                                        <dd>로그가 나온후 다시 입력 라인으로 나가려면 q를 누르면 된다.</dd>
-
-                                        <dt>control + C</dt>
-                                        <dd>Quote 인용문에 갇혔을때 나가기</dd>
-
-                                        <dt>+ git add fileName(지정 파일 올리기)</dt>
-                                        <dd>지정 파일 스택에 올리기</dd>
-        
-                                    </dl>
+                                                <dt>+ git add fileName(지정 파일 올리기)</dt>
+                                                <dd>지정 파일 스택에 올리기</dd>
+                
+                                            </dl>
+                                            
+                                            
+                                            
+                                        </div>
+                                        
+                                    </div>
                                     
                                     
-                                    
-                                </div>
-                                
-                            </div>
-                            
-                            
-                            <p>
-                                위처럼 새로 연결을 시켰을경우 commit을 단한번도 한적이 없기 때문에 마스터도 없다
-                                원격 저장소의 이름은 지금부터는 확인가능하고 명령어는 git remote 라고 치면 된다.
-                                origin이 뜨면 연결됐다는 뜻이고 안됐다면 안 뜬다.
-                            </p>
-                            
-                            <div class="practical">
-                                <h3>정리 하기</h3>
-
-                                <dl>
-                                    <dt>1. git add .</dt>
-                                    <dd>수정된 파일 찾아서 업로드될 로컬 대기스택에 자동으로 올라간다.</dd>
-
-                                    <dt>2 .git status</dt>
-                                    <dd>업로드된 파일 상태 보기 (빨간색으로 파일이뜨면 수정됐지만 로컬스택에 안올라와있고 초록색이면 다 최신상태로 로컬스택에 올라와있다는 뜻</dd>
-
-                                    <dt>3 .git commit -m "(수정된 내용 설명 적기)"</dt>
-                                    <dd>변경사항 메세지를 적고 로컬로 원격(origin)에 업로드가 된다.</dd>
-                                    
-                                    <dt>4. git push origin master(master는 작업중인 워크스페이스)</dt>
-                                    <dd>git 사이트로 퍼블리쉬 된다.</dd>
-
-                                    
-
-                                    
-                                    
-                                </dl>
-                                <div class="tip">
-                                    <h3>TIP</h3>
-
                                     <p>
-                                        사이트에 로그인이 안되있는 경우인데 그럴경우 로그인하고 다시 git push origin master 라고 치면 제대로 올라간다.
+                                        위처럼 새로 연결을 시켰을경우 commit을 단한번도 한적이 없기 때문에 마스터도 없다
+                                        원격 저장소의 이름은 지금부터는 확인가능하고 명령어는 git remote 라고 치면 된다.
+                                        origin이 뜨면 연결됐다는 뜻이고 안됐다면 안 뜬다.
                                     </p>
-                                </div>
-                                
-                            </div>
-                            
-
-                            
-
-                            
-                        </div>
-
-                        <div class="bStruct">
-                            
-                            <img src="./images/basicStructure.svg" alt="basicStructure">
-                        </div>
-                        <div class="impFont">
-                            <img src="./images/importFont.svg" alt="importFont">
-                        </div>
-                        <div class="mainNav">
-                            <img src="./images/mainNav.svg" alt="mainManu">
-                        </div>
-                        <div class="logIn">
-                            <br>
-                            <strong>Reference - Moon 20201206_A.mp4 / Project: moon_resom / File : loginHome.php</strong>
-                            
-                            <h2>Log In Html Form</h2>
-                            
-                            <!-- <div class="grid-container">
-                                <div class="code-area">
-                                    <div class="code-area-header">
-                                        <h1>Editor</h1>
-                                        <button>run</button>
+                                    
+                                    <div class="practical">
+                                        <h3>정리 하기</h3>
+        
+                                        <dl>
+                                            <dt>1. git add .</dt>
+                                            <dd>수정된 파일 찾아서 업로드될 로컬 대기스택에 자동으로 올라간다.</dd>
+        
+                                            <dt>2 .git status</dt>
+                                            <dd>업로드된 파일 상태 보기 (빨간색으로 파일이뜨면 수정됐지만 로컬스택에 안올라와있고 초록색이면 다 최신상태로 로컬스택에 올라와있다는 뜻</dd>
+        
+                                            <dt>3 .git commit -m "(수정된 내용 설명 적기)"</dt>
+                                            <dd>변경사항 메세지를 적고 로컬로 원격(origin)에 업로드가 된다.</dd>
+                                            
+                                            <dt>4. git push origin master(master는 작업중인 워크스페이스)</dt>
+                                            <dd>git 사이트로 퍼블리쉬 된다.</dd>
+        
+                                            
+        
+                                            
+                                            
+                                        </dl>
+                                        <div class="tip">
+                                            <h3>TIP</h3>
+        
+                                            <p>
+                                                사이트에 로그인이 안되있는 경우인데 그럴경우 로그인하고 다시 git push origin master 라고 치면 제대로 올라간다.
+                                            </p>
+                                        </div>
+                                        
                                     </div>
-                                    <textarea class="codemirror-textarea"></textarea>
+                                    
+        
+                                    
+        
+                                    
                                 </div>
-                                
-                            </div> 
-                            <div class="grid-container">
-                                <div class="code-area">
-                                    <div class="code-area-header">
-                                        <h1>shell</h1>
-                                        <button>clear</button>
-                                    </div>
-                                    <textarea class="codemirror-textarea"></textarea>
+                            </li>
+                        </ul>
+                        <!---------------------- html start ---------------------->
+                        <ul class="html">
+                            <li class="tabGrp">
+                                <div class="content bStruct"><!-- === bStruct === -->
+                            
+                                    <img src="./images/basicStructure.svg" alt="basicStructure">
                                 </div>
-                                
-                            </div> -->
-                            <div class="cont" id="content">
-                                <textarea class="textBox" id="src" onkeyup="show()">
-                                    <body>
-                                        <div class="loginGrp">
-                                            <form action="" method="GET">
-                                                <fieldset>
-                                                    <legend>회원로그인</legend>
-                                                    <div class="loginBox"> 
-                                                        <div class="userType">
-                                                            <strong>회원구분</strong>
-                                                            <label>
-                                                                <input type="radio" name="solo">
-                                                                <span>개인</span>
-                                                            </label>
-                                                            <label>
-                                                                <input type="radio" name="solo">
-                                                                <span>법인</span>
-                                                            </label>
-                                                        </div>
-                    
-                    
-                                                        <div class="userInfo">
-                                                            <div class="idBox">
-                                                                <label for="userId">아이디</label>
-                                                                <input name="userid" type="text" id="userId">
-                                                        
-                                                                <label for="userPw">비밀번호</label>
-                                                                <input name="password" type="password" id="userPw">
+                            </li>
+                            <li class="tabGrp">
+                                <div class="content impFont"><!-- === impFont === -->
+                                    <img src="./images/importFont.svg" alt="importFont">
+                                </div>
+                            </li>
+                            <li class="tabGrp"><!-- === fontAwesome-->
+                                <div class="content impFontAwesome">
+
+                                </div>
+                            </li>
+                            <li class="tabGrp">
+                                <div class="content mainNav"><!-- === mainNav === -->
+                                    <img src="./images/mainNav.svg" alt="mainManu">
+                                </div>
+                            </li>
+                            <li class="tabGrp">
+                                <div class="content logIn"><!-- === logIn === -->
+                                    <br>
+                                    <strong>Reference - Moon 20201206_A.mp4 / Project: moon_resom / File : loginHome.php</strong>
+                                    
+                                    <h2>Log In Html Form</h2>
+                                    
+                                    <!-- <div class="grid-container">
+                                        <div class="code-area">
+                                            <div class="code-area-header">
+                                                <h1>Editor</h1>
+                                                <button>run</button>
+                                            </div>
+                                            <textarea class="codemirror-textarea"></textarea>
+                                        </div>
+                                        
+                                    </div> 
+                                    <div class="grid-container">
+                                        <div class="code-area">
+                                            <div class="code-area-header">
+                                                <h1>shell</h1>
+                                                <button>clear</button>
+                                            </div>
+                                            <textarea class="codemirror-textarea"></textarea>
+                                        </div>
+                                        
+                                    </div> -->
+                                    <div class="cont" id="content">
+                                        <textarea class="textBox" id="src" onkeyup="show()">
+                                            <body>
+                                                <div class="loginGrp">
+                                                    <form action="" method="GET">
+                                                        <fieldset>
+                                                            <legend>회원로그인</legend>
+                                                            <div class="loginBox"> 
+                                                                <div class="userType">
+                                                                    <strong>회원구분</strong>
+                                                                    <label>
+                                                                        <input type="radio" name="solo">
+                                                                        <span>개인</span>
+                                                                    </label>
+                                                                    <label>
+                                                                        <input type="radio" name="solo">
+                                                                        <span>법인</span>
+                                                                    </label>
+                                                                </div>
+                            
+                            
+                                                                <div class="userInfo">
+                                                                    <div class="idBox">
+                                                                        <label for="userId">아이디</label>
+                                                                        <input name="userid" type="text" id="userId">
+                                                                
+                                                                        <label for="userPw">비밀번호</label>
+                                                                        <input name="password" type="password" id="userPw">
+                                                                    </div>
+                                                                    <button type="submit">로그인</button> 
+                                                                </div>
                                                             </div>
-                                                            <button type="submit">로그인</button> 
+                                                        </fieldset>
+                                                    </form>
+                                                </div>
+                                            </body>
+                                            
+                                        </textarea>
+                                        <iframe class="frame" id="view-result"></iframe>
+        
+                                    </div>
+                                    
+                                    
+        
+                                    <div class="loginGrp">
+                                        <form action="" method="GET">
+                                            <fieldset>
+                                                                    
+                                                <legend>회원로그인</legend>
+                                                <div class="loginBox"> 
+                                                    <div class="userType">
+                                                        <strong>회원구분</strong>
+                                                        <label>
+                                                            <input type="radio" name="solo">
+                                                            <span>개인</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="solo">
+                                                            <span>법인</span>
+                                                        </label>
+                                                    </div>
+                
+                
+                                                    <div class="userInfo">
+                                                        <div class="idBox">
+                                                            <label for="userId">아이디</label>
+                                                            <input name="userid" type="text" id="userId">
+                                                    
+                                                            <label for="userPw">비밀번호</label>
+                                                            <input name="password" type="password" id="userPw">
+                                                        </div>
+                                                        <button type="submit">로그인</button> 
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                        
+                                    
+                                    <br>
+                                    <img src="./images/login.svg" alt="logInStructure">
+                                </div>
+                            </li>
+                            <li class="tabGrp">
+                                <div class="content scrollBar">
+
+                                </div>
+                            </li>
+                            <li class="tabGrp">
+                                <div class="content radio"><!-- === radio == -->
+                                    <strong>Reference - Moon 20201206_A.mp4 / Project: moon_resom / File : loginHome.php</strong>
+        
+                                    <h2>CheckBox Form</h2>
+                                    <div class="checkBoxGrp">
+                                        <div class="userType">
+                                            <strong>회원구분</strong>
+                                            <label>
+                                                <input type="radio" name="solo">
+                                                <span>개인</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="solo">
+                                                <span>법인</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <img src="./images/checkBox.svg" alt="logInStructure">
+                                </div>
+                            </li>
+                            <li class="tabGrp">
+                                <div class="content searchBar">
+
+                                </div>
+
+                            </li>
+                            <li class="tabGrp">
+                                <div class="content aona"><!-- === a on a === -->
+                                    <strong>Reference - moon20210916_A(mySiteFix).mp4 , moon20210916_B(mySiteFix).mp4 / Project: checkOut(personal) / File : /htdocs/checkOut(personal)</strong>
+                                    <i class="keyword">Keyword : aona , btn on a , hover , scroll , overflow , dim</i>
+                                    <h2>Btn on a tag Form</h2>
+                                    <div class="listGrp">
+                                        <ul class='newList'>
+                                            <li class='items'>
+                                                <button type='button' class='btnOpt'><!--버튼으로 옵션버튼을 넣었지만 호버되면서 확대되는게 이미지따로 버튼 따로라 어색함 가장이상적인건 호버되는 a안에 집어넣는건데 a안에 버튼이 들어갈수 없기때문에 다른방안은 호버영역을 a가아니닌 li영역으로 잡아야하는가?-->
+                                                    <i class="fas fa-ellipsis-v"></i>
+                                                </button>
+                                                <a href="#"> 
+                                                    <div class="thumb">
+                                                        <img src="./images/dummy_0.jpg" alt="feedImage">
+                                                        <div class="dim">
+                                                            <span class='comment'>
+                                                                <i class="far fa-comment-alt"></i>
+                                                                <b>10</b>
+                                                            </span>
+                                                            <span class='view'>
+                                                                <i class="far fa-eye"></i>
+                                                                <b>255</b>
+                                                            </span>
                                                         </div>
                                                     </div>
-                                                </fieldset>
-                                            </form>
-                                        </div>
-                                    </body>
-                                    
-                                </textarea>
-                                <iframe class="frame" id="view-result"></iframe>
-
-                            </div>
-                            
-                            
-
-                            <div class="loginGrp">
-                                <form action="" method="GET">
-                                    <fieldset>
-                                                            
-                                        <legend>회원로그인</legend>
-                                        <div class="loginBox"> 
-                                            <div class="userType">
-                                                <strong>회원구분</strong>
-                                                <label>
-                                                    <input type="radio" name="solo">
-                                                    <span>개인</span>
-                                                </label>
-                                                <label>
-                                                    <input type="radio" name="solo">
-                                                    <span>법인</span>
-                                                </label>
-                                            </div>
-        
-        
-                                            <div class="userInfo">
-                                                <div class="idBox">
-                                                    <label for="userId">아이디</label>
-                                                    <input name="userid" type="text" id="userId">
-                                            
-                                                    <label for="userPw">비밀번호</label>
-                                                    <input name="password" type="password" id="userPw">
-                                                </div>
-                                                <button type="submit">로그인</button> 
-                                            </div>
-                                        </div>
-                                    </fieldset>
-                                </form>
-                            </div>
-                                
-                            
-                            <br>
-                            <img src="./images/login.svg" alt="logInStructure">
-                        </div>
-                        <div class="radio">
-                            <strong>Reference - Moon 20201206_A.mp4 / Project: moon_resom / File : loginHome.php</strong>
-
-                            <h2>CheckBox Form</h2>
-                            <div class="checkBoxGrp">
-                                <div class="userType">
-                                    <strong>회원구분</strong>
-                                    <label>
-                                        <input type="radio" name="solo">
-                                        <span>개인</span>
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="solo">
-                                        <span>법인</span>
-                                    </label>
+                                                    <div class='subTitleBar'>
+                                                        <div class='dataCircle'>
+                                                            <span class='updateCircle'></span>
+                                                            <span class='ageCircle'></span>
+                                                        </div>
+                                                        <p>I have an idea but I need some feedback. Could you please give me some? I have no much time.</p>
+                                                    </div> 
+                                                </a>
+                                            </li> 
+                                            <li class='items'>
+                                                <button type='button' class='btnOpt'><!--버튼으로 옵션버튼을 넣었지만 호버되면서 확대되는게 이미지따로 버튼 따로라 어색함 가장이상적인건 호버되는 a안에 집어넣는건데 a안에 버튼이 들어갈수 없기때문에 다른방안은 호버영역을 a가아니닌 li영역으로 잡아야하는가?-->
+                                                    <i class="fas fa-ellipsis-v"></i>
+                                                </button>
+                                                <a href="#"> 
+                                                    <div class="thumb">
+                                                        <img src="./images/dummy_1.jpg" alt="feedImage">
+                                                        <div class="dim">
+                                                            <span class='comment'>
+                                                                <i class="far fa-comment-alt"></i>
+                                                                <b>10</b>
+                                                            </span>
+                                                            <span class='view'>
+                                                                <i class="far fa-eye"></i>
+                                                                <b>255</b>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class='subTitleBar'>
+                                                        <div class='dataCircle'>
+                                                            <span class='updateCircle'></span>
+                                                            <span class='ageCircle'></span>
+                                                        </div>
+                                                        <p>I have an idea but I need some feedback. Could you please give me some? I have no much time.</p>
+                                                    </div> 
+                                                </a>
+                                            </li> 
+                                            <li class='items'>
+                                                <button type='button' class='btnOpt'><!--버튼으로 옵션버튼을 넣었지만 호버되면서 확대되는게 이미지따로 버튼 따로라 어색함 가장이상적인건 호버되는 a안에 집어넣는건데 a안에 버튼이 들어갈수 없기때문에 다른방안은 호버영역을 a가아니닌 li영역으로 잡아야하는가?-->
+                                                    <i class="fas fa-ellipsis-v"></i>
+                                                </button>
+                                                <a href="#"> 
+                                                    <div class="thumb">
+                                                        <img src="./images/dummy_2.jpg" alt="feedImage">
+                                                        <div class="dim">
+                                                            <span class='comment'>
+                                                                <i class="far fa-comment-alt"></i>
+                                                                <b>10</b>
+                                                            </span>
+                                                            <span class='view'>
+                                                                <i class="far fa-eye"></i>
+                                                                <b>255</b>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class='subTitleBar'>
+                                                        <div class='dataCircle'>
+                                                            <span class='updateCircle'></span>
+                                                            <span class='ageCircle'></span>
+                                                        </div>
+                                                        <p>I have an idea but I need some feedback. Could you please give me some? I have no much time.</p>
+                                                    </div> 
+                                                </a>
+                                            </li> 
+                                            <li class='items'>
+                                                <button type='button' class='btnOpt'><!--버튼으로 옵션버튼을 넣었지만 호버되면서 확대되는게 이미지따로 버튼 따로라 어색함 가장이상적인건 호버되는 a안에 집어넣는건데 a안에 버튼이 들어갈수 없기때문에 다른방안은 호버영역을 a가아니닌 li영역으로 잡아야하는가?-->
+                                                    <i class="fas fa-ellipsis-v"></i>
+                                                </button>
+                                                <a href="#"> 
+                                                    <div class="thumb">
+                                                        <img src="./images/dummy_3.jpg" alt="feedImage">
+                                                        <div class="dim">
+                                                            <span class='comment'>
+                                                                <i class="far fa-comment-alt"></i>
+                                                                <b>10</b>
+                                                            </span>
+                                                            <span class='view'>
+                                                                <i class="far fa-eye"></i>
+                                                                <b>255</b>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class='subTitleBar'>
+                                                        <div class='dataCircle'>
+                                                            <span class='updateCircle'></span>
+                                                            <span class='ageCircle'></span>
+                                                        </div>
+                                                        <p>I have an idea but I need some feedback. Could you please give me some? I have no much time.</p>
+                                                    </div> 
+                                                </a>
+                                            </li> 
+                                            <li class='items'>
+                                                <button type='button' class='btnOpt'><!--버튼으로 옵션버튼을 넣었지만 호버되면서 확대되는게 이미지따로 버튼 따로라 어색함 가장이상적인건 호버되는 a안에 집어넣는건데 a안에 버튼이 들어갈수 없기때문에 다른방안은 호버영역을 a가아니닌 li영역으로 잡아야하는가?-->
+                                                    <i class="fas fa-ellipsis-v"></i>
+                                                </button>
+                                                <a href="#"> 
+                                                    <div class="thumb">
+                                                        <img src="./images/dummy_4.jpg" alt="feedImage">
+                                                        <div class="dim">
+                                                            <span class='comment'>
+                                                                <i class="far fa-comment-alt"></i>
+                                                                <b>10</b>
+                                                            </span>
+                                                            <span class='view'>
+                                                                <i class="far fa-eye"></i>
+                                                                <b>255</b>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class='subTitleBar'>
+                                                        <div class='dataCircle'>
+                                                            <span class='updateCircle'></span>
+                                                            <span class='ageCircle'></span>
+                                                        </div>
+                                                        <p>I have an idea but I need some feedback. Could you please give me some? I have no much time.</p>
+                                                    </div> 
+                                                </a>
+                                            </li> 
+                                            <li class='items'>
+                                                <button type='button' class='btnOpt'><!--버튼으로 옵션버튼을 넣었지만 호버되면서 확대되는게 이미지따로 버튼 따로라 어색함 가장이상적인건 호버되는 a안에 집어넣는건데 a안에 버튼이 들어갈수 없기때문에 다른방안은 호버영역을 a가아니닌 li영역으로 잡아야하는가?-->
+                                                    <i class="fas fa-ellipsis-v"></i>
+                                                </button>
+                                                <a href="#"> 
+                                                    <div class="thumb">
+                                                        <img src="./images/dummy_5.jpg" alt="feedImage">
+                                                        <div class="dim">
+                                                            <span class='comment'>
+                                                                <i class="far fa-comment-alt"></i>
+                                                                <b>10</b>
+                                                            </span>
+                                                            <span class='view'>
+                                                                <i class="far fa-eye"></i>
+                                                                <b>255</b>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class='subTitleBar'>
+                                                        <div class='dataCircle'>
+                                                            <span class='updateCircle'></span>
+                                                            <span class='ageCircle'></span>
+                                                        </div>
+                                                        <p>I have an idea but I need some feedback. Could you please give me some? I have no much time.</p>
+                                                    </div> 
+                                                </a>
+                                            </li> 
+                                    </div>
+                                    <img src="./images/aona.svg" alt="structure">
+                                    <img src="./images/aona2.svg" alt="htmlStructure">
                                 </div>
-                            </div>
-                            <img src="./images/checkBox.svg" alt="logInStructure">
-                        </div>
-                        
-                        <div class="aona">
-                            <strong>Reference - moon20210916_A(mySiteFix).mp4 , moon20210916_B(mySiteFix).mp4 / Project: checkOut(personal) / File : /htdocs/checkOut(personal)</strong>
-                            <i class="keyword">Keyword : aona , btn on a , hover , scroll , overflow , dim</i>
-                            <h2>Btn on a tag Form</h2>
-                            <div class="listGrp">
-                                <ul class='newList'>
-                                    <li class='items'>
-                                        <button type='button' class='btnOpt'><!--버튼으로 옵션버튼을 넣었지만 호버되면서 확대되는게 이미지따로 버튼 따로라 어색함 가장이상적인건 호버되는 a안에 집어넣는건데 a안에 버튼이 들어갈수 없기때문에 다른방안은 호버영역을 a가아니닌 li영역으로 잡아야하는가?-->
-                                            <i class="fas fa-ellipsis-v"></i>
-                                        </button>
-                                        <a href="#"> 
-                                            <div class="thumb">
-                                                <img src="./images/dummy_0.jpg" alt="feedImage">
-                                                <div class="dim">
-                                                    <span class='comment'>
-                                                        <i class="far fa-comment-alt"></i>
-                                                        <b>10</b>
-                                                    </span>
-                                                    <span class='view'>
-                                                        <i class="far fa-eye"></i>
-                                                        <b>255</b>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class='subTitleBar'>
-                                                <div class='dataCircle'>
-                                                    <span class='updateCircle'></span>
-                                                    <span class='ageCircle'></span>
-                                                </div>
-                                                <p>I have an idea but I need some feedback. Could you please give me some? I have no much time.</p>
-                                            </div> 
-                                        </a>
-                                    </li> 
-                                    <li class='items'>
-                                        <button type='button' class='btnOpt'><!--버튼으로 옵션버튼을 넣었지만 호버되면서 확대되는게 이미지따로 버튼 따로라 어색함 가장이상적인건 호버되는 a안에 집어넣는건데 a안에 버튼이 들어갈수 없기때문에 다른방안은 호버영역을 a가아니닌 li영역으로 잡아야하는가?-->
-                                            <i class="fas fa-ellipsis-v"></i>
-                                        </button>
-                                        <a href="#"> 
-                                            <div class="thumb">
-                                                <img src="./images/dummy_1.jpg" alt="feedImage">
-                                                <div class="dim">
-                                                    <span class='comment'>
-                                                        <i class="far fa-comment-alt"></i>
-                                                        <b>10</b>
-                                                    </span>
-                                                    <span class='view'>
-                                                        <i class="far fa-eye"></i>
-                                                        <b>255</b>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class='subTitleBar'>
-                                                <div class='dataCircle'>
-                                                    <span class='updateCircle'></span>
-                                                    <span class='ageCircle'></span>
-                                                </div>
-                                                <p>I have an idea but I need some feedback. Could you please give me some? I have no much time.</p>
-                                            </div> 
-                                        </a>
-                                    </li> 
-                                    <li class='items'>
-                                        <button type='button' class='btnOpt'><!--버튼으로 옵션버튼을 넣었지만 호버되면서 확대되는게 이미지따로 버튼 따로라 어색함 가장이상적인건 호버되는 a안에 집어넣는건데 a안에 버튼이 들어갈수 없기때문에 다른방안은 호버영역을 a가아니닌 li영역으로 잡아야하는가?-->
-                                            <i class="fas fa-ellipsis-v"></i>
-                                        </button>
-                                        <a href="#"> 
-                                            <div class="thumb">
-                                                <img src="./images/dummy_2.jpg" alt="feedImage">
-                                                <div class="dim">
-                                                    <span class='comment'>
-                                                        <i class="far fa-comment-alt"></i>
-                                                        <b>10</b>
-                                                    </span>
-                                                    <span class='view'>
-                                                        <i class="far fa-eye"></i>
-                                                        <b>255</b>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class='subTitleBar'>
-                                                <div class='dataCircle'>
-                                                    <span class='updateCircle'></span>
-                                                    <span class='ageCircle'></span>
-                                                </div>
-                                                <p>I have an idea but I need some feedback. Could you please give me some? I have no much time.</p>
-                                            </div> 
-                                        </a>
-                                    </li> 
-                                    <li class='items'>
-                                        <button type='button' class='btnOpt'><!--버튼으로 옵션버튼을 넣었지만 호버되면서 확대되는게 이미지따로 버튼 따로라 어색함 가장이상적인건 호버되는 a안에 집어넣는건데 a안에 버튼이 들어갈수 없기때문에 다른방안은 호버영역을 a가아니닌 li영역으로 잡아야하는가?-->
-                                            <i class="fas fa-ellipsis-v"></i>
-                                        </button>
-                                        <a href="#"> 
-                                            <div class="thumb">
-                                                <img src="./images/dummy_3.jpg" alt="feedImage">
-                                                <div class="dim">
-                                                    <span class='comment'>
-                                                        <i class="far fa-comment-alt"></i>
-                                                        <b>10</b>
-                                                    </span>
-                                                    <span class='view'>
-                                                        <i class="far fa-eye"></i>
-                                                        <b>255</b>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class='subTitleBar'>
-                                                <div class='dataCircle'>
-                                                    <span class='updateCircle'></span>
-                                                    <span class='ageCircle'></span>
-                                                </div>
-                                                <p>I have an idea but I need some feedback. Could you please give me some? I have no much time.</p>
-                                            </div> 
-                                        </a>
-                                    </li> 
-                                    <li class='items'>
-                                        <button type='button' class='btnOpt'><!--버튼으로 옵션버튼을 넣었지만 호버되면서 확대되는게 이미지따로 버튼 따로라 어색함 가장이상적인건 호버되는 a안에 집어넣는건데 a안에 버튼이 들어갈수 없기때문에 다른방안은 호버영역을 a가아니닌 li영역으로 잡아야하는가?-->
-                                            <i class="fas fa-ellipsis-v"></i>
-                                        </button>
-                                        <a href="#"> 
-                                            <div class="thumb">
-                                                <img src="./images/dummy_4.jpg" alt="feedImage">
-                                                <div class="dim">
-                                                    <span class='comment'>
-                                                        <i class="far fa-comment-alt"></i>
-                                                        <b>10</b>
-                                                    </span>
-                                                    <span class='view'>
-                                                        <i class="far fa-eye"></i>
-                                                        <b>255</b>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class='subTitleBar'>
-                                                <div class='dataCircle'>
-                                                    <span class='updateCircle'></span>
-                                                    <span class='ageCircle'></span>
-                                                </div>
-                                                <p>I have an idea but I need some feedback. Could you please give me some? I have no much time.</p>
-                                            </div> 
-                                        </a>
-                                    </li> 
-                                    <li class='items'>
-                                        <button type='button' class='btnOpt'><!--버튼으로 옵션버튼을 넣었지만 호버되면서 확대되는게 이미지따로 버튼 따로라 어색함 가장이상적인건 호버되는 a안에 집어넣는건데 a안에 버튼이 들어갈수 없기때문에 다른방안은 호버영역을 a가아니닌 li영역으로 잡아야하는가?-->
-                                            <i class="fas fa-ellipsis-v"></i>
-                                        </button>
-                                        <a href="#"> 
-                                            <div class="thumb">
-                                                <img src="./images/dummy_5.jpg" alt="feedImage">
-                                                <div class="dim">
-                                                    <span class='comment'>
-                                                        <i class="far fa-comment-alt"></i>
-                                                        <b>10</b>
-                                                    </span>
-                                                    <span class='view'>
-                                                        <i class="far fa-eye"></i>
-                                                        <b>255</b>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class='subTitleBar'>
-                                                <div class='dataCircle'>
-                                                    <span class='updateCircle'></span>
-                                                    <span class='ageCircle'></span>
-                                                </div>
-                                                <p>I have an idea but I need some feedback. Could you please give me some? I have no much time.</p>
-                                            </div> 
-                                        </a>
-                                    </li> 
-                            </div>
-                            <img src="./images/aona.svg" alt="structure">
-                            <img src="./images/aona2.svg" alt="htmlStructure">
-                        </div>
+                            </li>
+                        </ul>
+                        <!---------------------- html end ---------------------->
 
                         <!---------------------- javaScript---------------------->
-
-                        <div class="classAdd">
-                            <strong>Reference - ejey20211123_C.mp4 , htdoc/javascript/script_031(getForEach).html</strong>
-                            <i class="keyword">Keyword : classList , add , remove , classAdd , class add</i>
-                            <h2>ClassList - class add & remove</h2>
-                            <img src="./images/classAddRemove.svg" alt="classAdd">
-                        </div>
-                        <div class="forEach">
-                            <strong>Reference - ejey20211123_C.mp4 , htdoc/javascript/script_031(getForEach).html</strong>
-                            <i class="keyword">Keyword : classList , add , remove , classAdd , class add, btn li, forEach</i>
-                            <h2>ClassList - class add & remove</h2>
-                            <img src="./images/forEachBtn(li).svg" alt="forEach">
-                        </div>
-                        <div class="forEachShort">
-                            <strong>Reference - ejey20211123_C.mp4 , htdoc/javascript/script_028(getForEach).html</strong>
-                            <i class="keyword">Keyword : forEach, =>, no function()</i>
-                            <h2>forEach & =></h2>
-                            <img src="./images/forEach&=>.svg" alt="forEachShort">
-                        </div>
-                        <div class="ifIncludes">
-                            <strong>Reference - ejey20211123_C.mp4 , htdoc/javascript/script_028(getForEach).html</strong>
-                            <i class="keyword">Keyword : if, includes, !, not, push</i>
-                            <h2>If Includes push !(not)</h2>
-                            <img src="./images/if_includesPush!(not).svg" alt="ifIncludesPush!">
-                        </div>
+                        <ul class="javaS"> 
+                            <li class="tabGrp">
+                                <div class="content classAdd"><!-- === classAdd === -->
+                                    <strong>Reference - ejey20211123_C.mp4 , htdoc/javascript/script_031(getForEach).html</strong>
+                                    <i class="keyword">Keyword : classList , add , remove , classAdd , class add</i>
+                                    <h2>ClassList - class add & remove</h2>
+                                    <img src="./images/classAddRemove.svg" alt="classAdd">
+                                </div>
+                            </li>
+                            <li class="tabGrp">
+                                <div class="content forEach"><!-- === forEach === -->
+                                    <strong>Reference - ejey20211123_C.mp4 , htdoc/javascript/script_031(getForEach).html</strong>
+                                    <i class="keyword">Keyword : classList , add , remove , classAdd , class add, btn li, forEach</i>
+                                    <h2>ClassList - class add & remove</h2>
+                                    <img src="./images/forEachBtn(li).svg" alt="forEach">
+                                </div>
+                            </li>
+                            <li class="tabGrp">
+                                <div class="content forEachShort"><!-- === forEachShort === -->
+                                    <strong>Reference - ejey20211123_C.mp4 , htdoc/javascript/script_028(getForEach).html</strong>
+                                    <i class="keyword">Keyword : forEach, =>, no function()</i>
+                                    <h2>forEach & =></h2>
+                                    <img src="./images/forEach&=>.svg" alt="forEachShort">
+                                </div>
+                            </li>
+                            <li class="tabGrp">
+                                <div class="content ifIncludes"><!-- === ifIncludes === -->
+                                    <strong>Reference - ejey20211123_C.mp4 , htdoc/javascript/script_028(getForEach).html</strong>
+                                    <i class="keyword">Keyword : if, includes, !, not, push</i>
+                                    <h2>If Includes push !(not)</h2>
+                                    <img src="./images/if_includesPush!(not).svg" alt="ifIncludesPush!">
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        
+                        
+                        
+                        
                     </div>
                 </div>
             </div>
@@ -651,67 +697,116 @@
     </div>
     
     <script>
-        let set1 = document.querySelectorAll('.setting a')
-        let set2 = document.querySelectorAll('.basicHtml a')
-        let set3 = document.querySelectorAll('.java a')
+
+        // const initLi = document.querySelectorAll('.initial .tabGrp')
+        const tabLi = document.querySelectorAll('.basicHtml li')
+        const htmlLi = document.querySelectorAll('.html .tabGrp')
+        
+        // const javaLi = document.querySelectorAll('.javaS .tabGrp')
+        let activeList = htmlLi[0];
+        let tabList = tabLi[0];
+        // console.log(initLi);
+        activeList.classList.add('active')
+        console.log(htmlLi.length);
+        // console.log(javaLi);
+        // activeList.classList.add('active')
+        // console.log(initList.length)
+
+        // for(let i = 0; i <initLi.length; i++) {
+        //     initLi[i].addEventListener('click', function() {
+        //         activeList.classList.remove('active');
+        //         activeList = this;
+        //         activeList.classList.add('active');
+        //         console.log(initLi);
+        //     })
+        // }
+        
+        
+            
+        
         
 
-        let gitTxt = document.querySelector('.gitDoc')
-        let bStruct = document.querySelector('.bStruct')
-        let impFont = document.querySelector('.impFont')
-        let mainNav = document.querySelector('.mainNav')
-        let logIn = document.querySelector('.logIn')
-        let radio = document.querySelector('.radio')
-        let aona = document.querySelector('.aona')
-        let classA = document.querySelector('.classAdd')
-        let forEach = document.querySelector('.forEach')
-        let forEachShort = document.querySelector('.forEachShort')
-        let ifIncludes = document.querySelector('.ifIncludes')
+        tabLi.forEach(function(e,idx) {//클릭할 대상은 따로 있고 active가 활성화되어 표시될건 viewGrp안의 컨텐츠이기때문에 아래처럼 activeList에 명령을 넣어준다ㅏ. for문이 아닌 forEach로 써야 해당 대상의 순번을 지정하여 명령을 실행시킬 수 있다. 
+            e.addEventListener('click', function() {//클릭이 일어날 대상인 tabLi 에 idx를 넣어주고 명령을 넣어준다. e 가 tabLi[idx]이다. //화살표 함수(=>)는 function()은 this의 기능에 차이가 큼 this사용할땐 사용않기
+                tabList.classList.remove('active');
+                tabList = this;
+                tabList.classList.add('active');
+                console.log(this)
+                activeList.classList.remove('active');
+                activeList = htmlLi[idx];//클릭한건 탭메뉴니까 해당이 안됨
+                activeList.classList.add('active');
+            })
+        })
+        // for(let i = 0; i <javaList.length; i++) {
+        //     javaList[i].addEventListener('click', function() {
+        //         activeList.classList.remove('active');
+        //         activeList = this;
+        //         activeList.classList.add('active');
+        //         console.log(activeList);
+        //     })
+        // }
+        // console.log(htmlList)
+        // let set1 = document.querySelectorAll('.setting a')
+        // let set2 = document.querySelectorAll('.basicHtml a')
+        // let set3 = document.querySelectorAll('.java a')
+        
 
-        set1[1].addEventListener('click', function() {
-            // gitTxt.classList.add('on')
-            gitTxt.style.display = 'block';
-        })
-        set2[0].addEventListener('click', function() {
-            // bStruct.classList.add('on')
-            bStruct.style.display = 'block';
-        })
-        set2[1].addEventListener('click', function() {
-            // bStruct.classList.add('on')
-            impFont.style.display = 'block';
-        })
-        set2[3].addEventListener('click', function() {
-            // bStruct.classList.add('on')
-            mainNav.style.display = 'block';
-        })
-        set2[4].addEventListener('click', function() {
-            // bStruct.classList.add('on')
-            logIn.style.display = 'block';
-        })
-        set2[6].addEventListener('click', function() {
-            // bStruct.classList.add('on')
-            radio.style.display = 'block';
-        })
-        set2[8].addEventListener('click', function() {
-            // bStruct.classList.add('on')
-            aona.style.display = 'block';
-        })
-        set3[0].addEventListener('click', function() {
-            // bStruct.classList.add('on')
-            classA.style.display = 'block';
-        })
-        set3[1].addEventListener('click', function() {
-            // bStruct.classList.add('on')
-            forEach.style.display = 'block';
-        })
-        set3[2].addEventListener('click', function() {
-            // bStruct.classList.add('on')
-            forEachShort.style.display = 'block';
-        })
-        set3[3].addEventListener('click', function() {
-            // bStruct.classList.add('on')
-            ifIncludes.style.display = 'block';
-        })
+        // let gitTxt = document.querySelector('.gitDoc')
+        // let bStruct = document.querySelector('.bStruct')
+        // let impFont = document.querySelector('.impFont')
+        // let mainNav = document.querySelector('.mainNav')
+        // let logIn = document.querySelector('.logIn')
+        // let radio = document.querySelector('.radio')
+        // let aona = document.querySelector('.aona')
+        // let classA = document.querySelector('.classAdd')
+        // let forEach = document.querySelector('.forEach')
+        // let forEachShort = document.querySelector('.forEachShort')
+        // let ifIncludes = document.querySelector('.ifIncludes')
+
+        // set1[1].addEventListener('click', function() {
+        //     // gitTxt.classList.add('on')
+        //     gitTxt.style.display = 'block';
+        // })
+        // set2[0].addEventListener('click', function() {
+        //     // bStruct.classList.add('on')
+        //     bStruct.style.display = 'block';
+        // })
+        // set2[1].addEventListener('click', function() {
+        //     // bStruct.classList.add('on')
+        //     impFont.style.display = 'block';
+        // })
+        // set2[3].addEventListener('click', function() {
+        //     // bStruct.classList.add('on')
+        //     mainNav.style.display = 'block';
+        // })
+        // set2[4].addEventListener('click', function() {
+        //     // bStruct.classList.add('on')
+        //     logIn.style.display = 'block';
+        // })
+        // set2[6].addEventListener('click', function() {
+        //     // bStruct.classList.add('on')
+        //     radio.style.display = 'block';
+        // })
+        // set2[8].addEventListener('click', function() {
+        //     // bStruct.classList.add('on')
+        //     aona.style.display = 'block';
+        // })
+        // set3[0].addEventListener('click', function() {
+        //     // bStruct.classList.add('on')
+        //     classA.style.display = 'block';
+        // })
+        // set3[1].addEventListener('click', function() {
+        //     // bStruct.classList.add('on')
+        //     forEach.style.display = 'block';
+        // })
+        // set3[2].addEventListener('click', function() {
+        //     // bStruct.classList.add('on')
+        //     forEachShort.style.display = 'block';
+        // })
+        // set3[3].addEventListener('click', function() {
+        //     // bStruct.classList.add('on')
+        //     ifIncludes.style.display = 'block';
+        // })
     </script>
 </body>
 </html>

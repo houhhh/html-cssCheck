@@ -20,6 +20,10 @@ strong {
     }
     
 }
+.html li.active a {
+    background-color:cadetblue;
+    
+}
 
 body {
     font-family: 'Nunito Sans', sans-serif;
@@ -110,13 +114,6 @@ body {
                 font-weight:300;
 
             }
-            .basicHtml {
-                
-                
-                
-            }
-            
-            
             
         }
         .viewGrp {
@@ -135,345 +132,374 @@ body {
                 ::-webkit-scrollbar-track {
                     display:none;
                 }
-                
-                .gitDoc, .bStruct, .impFont, .mainNav, .logIn, .radio, .aona, .classAdd, .forEach, .forEachShort, .ifIncludes {
-                    display:none;
-                    strong {
-                        font-size:20px;
-                    }
-                    .keyword {
-                        display:block;
-                        margin-top:20px;
-                        color:#696969;
-                    }
-                    h2 {
-                        
-                        font-size:40px;
-                        color:cadetblue;
-                        margin-top:60px;
-                    }
+                .initial .tabGrp.active .content {
+                    display:block;
                 }
-                .gitDoc {
-                    
-                    .hotCommand {
-                        margin-top:30px;
-                        display:flex;
-                        justify-content:space-between;
-                        .initialP h3 {
-                            // background-color:black;
-                            font-size:30px;
-                            font-weight:700;
-                            margin:20px 0;
-                            color:cadetblue;
-                            text-align:center;
-                        }
-                        .initialP {
-                            // background-color:red;
-                            flex-shrink:0;
-                            margin-right:15px;
-                            
-                            .initialList {
-                                margin-top:100px;
-                                li {
-                                    font-size:25px;
-                                    font-weight:300;
-                                    padding:20px 0;
-                                }
+                .html .tabGrp.active .content {
+                    display:block;
+                }
+                
+                .javaS .tabGrp.active .content {
+                    display:block;
+                }
+                
+                // .bStruct, .impFont, .mainNav, .radio, .aona, .classAdd, .forEach, .forEachShort, .ifIncludes {
+                //     display:none;
+                //     strong {
+                //         font-size:20px;
+                //     }
+                //     .keyword {
+                //         display:block;
+                //         margin-top:20px;
+                //         color:#696969;
+                //     }
+                //     h2 {
+                        
+                //         font-size:40px;
+                //         color:cadetblue;
+                //         margin-top:60px;
+                //     }
+                // }
+                .initial {
+                    .content {// ===== gitDoc =====
+                        display:none;
+                        .hotCommand {
+                            margin-top:30px;
+                            display:flex;
+                            justify-content:space-between;
+                            .initialP h3 {
+                                // background-color:black;
+                                font-size:30px;
+                                font-weight:700;
+                                margin:20px 0;
+                                color:cadetblue;
+                                text-align:center;
                             }
-                            
-                        }
-                        .gitCommand {
-                            
-                            .gitComList {
-                                display:flex;
-                                // background-color:blue;
-                                flex-wrap:wrap;
-                                justify-content:flex-end;
+                            .initialP {
+                                // background-color:red;
+                                flex-shrink:0;
+                                margin-right:15px;
                                 
-                                dt {
-                                    width:300px;
-                                    flex-shrink:0;
-                                    padding:10px 10px 10px 10px;
-                                    border-right:1px solid #626262;
-                                    border-bottom:1px solid #626262;
-                                    border-left:1px solid #626262;
-                                    
-                                    text-align:center;
-                                    background-color:rgba(73, 114, 175, 0.2);
-                                    
+                                .initialList {
+                                    margin-top:100px;
+                                    li {
+                                        font-size:25px;
+                                        font-weight:300;
+                                        padding:20px 0;
+                                    }
                                 }
                                 
-                                dd {
-                                    width:calc(100% - 500px);
-                                    text-align:center;
-                                    padding:10px 0;
-                                    border-right:1px solid #626262;
-                                    border-bottom:1px solid #626262;
-                                    //dd는 왜 first-child로 안잡히는지?
-                                    // &:first-child {
-                                    //     background-color:cornflowerblue;
+                            }
+                            .gitCommand {
+                                
+                                .gitComList {
+                                    display:flex;
+                                    // background-color:blue;
+                                    flex-wrap:wrap;
+                                    justify-content:flex-end;
+                                    
+                                    dt {
+                                        width:300px;
+                                        flex-shrink:0;
+                                        padding:10px 10px 10px 10px;
+                                        border-right:1px solid #626262;
+                                        border-bottom:1px solid #626262;
+                                        border-left:1px solid #626262;
+                                        
+                                        text-align:center;
+                                        background-color:rgba(73, 114, 175, 0.2);
+                                        
+                                    }
+                                    
+                                    dd {
+                                        width:calc(100% - 500px);
+                                        text-align:center;
+                                        padding:10px 0;
+                                        border-right:1px solid #626262;
+                                        border-bottom:1px solid #626262;
+                                        //dd는 왜 first-child로 안잡히는지?
+                                        // &:first-child {
+                                        //     background-color:cornflowerblue;
+                                        // }
+                                    }
+                                    // dt, dd:first-child {
+                                    //     background-color:rgba(73, 114, 175, 0.2);
+                                    //     border-right:1px solid #626262;
+                                    //     border-top:
                                     // }
                                 }
-                                // dt, dd:first-child {
-                                //     background-color:rgba(73, 114, 175, 0.2);
-                                //     border-right:1px solid #626262;
-                                //     border-top:
-                                // }
                             }
+                            
                         }
-                        
-                    }
-                    p {
-                        
-                        max-width:1000px;
-                        text-align:center;
-                        font-size:20px;
-                        font-weight:300;
-                        margin:30px auto;
-                    }
-                    .practical {
-                        
-                        max-width:1200px;
-                        
-                        h3 {
-                            margin-top:30px;
-                            font-size:27px;
-                            font-weight:700;
-                            color:rgb(119, 143, 153);
+                        p {
+                            
+                            max-width:1000px;
+                            text-align:center;
+                            font-size:20px;
+                            font-weight:300;
+                            margin:30px auto;
                         }
-                        .tip {
-                            display:flex;
-                            margin-top:30px;
-                            border:1px solid #626262;
-                            padding:0 30px;
-                            align-items:center;
+                        .practical {
+                            
+                            max-width:1200px;
+                            
                             h3 {
-                                margin-top:0;
+                                margin-top:30px;
                                 font-size:27px;
                                 font-weight:700;
-                                color:rgb(255, 74, 74);
-                                
+                                color:rgb(119, 143, 153);
                             }
-                            
-                            
-                        }
-                        dl {
-                            margin-top:30px;
-                            dt {
-                                font-size:25px;
-                                font-weight:400;
-                                margin:15px 0;
-                            }
-                            dd {
-                                padding-left:30px;
-                                font-size:18px;
-                                font-weight:300;
-                            }
-                        }
-                    }
-                }
-
-                .logIn {
-                    .cont {
-                        margin-top:40px;
-                        display:flex;
-                        .textBox {
-                            border:none;
-                            background-color:#141414;
-                            height:400px;
-                            width:50%;
-                            color:#f2f2f2;
-                            text-align:left;
-                            box-sizing:border-box;
-                        }
-                        .frame {
-                            border:none;
-                            background-color:#757575;
-                            margin-left:20px;
-                            height:400px;
-                            width:50%;
-                            box-sizing:border-box;
-                        }
-                    }
-                    
-                    .loginGrp {
-                        border:1px solid #8b8b8b;
-                        width:16%;
-                        padding:30px 30px;
-                        margin:50px 0;
-                        .userInfo {
-                            display:flex;
-                            justify-content:space-between;
-                            .idBox {
+                            .tip {
                                 display:flex;
-                                flex-wrap:wrap;
-                                justify-content:space-between;
-                                width:calc(100% - 100px);
-                                label {
-                                    margin-top:10px;
+                                margin-top:30px;
+                                border:1px solid #626262;
+                                padding:0 30px;
+                                align-items:center;
+                                h3 {
+                                    margin-top:0;
+                                    font-size:27px;
+                                    font-weight:700;
+                                    color:rgb(255, 74, 74);
+                                    
                                 }
-                                input {
-                                    width:calc(100% - 70px);
-                                    margin-top:10px;
-                                    box-sizing:border-box;
+                                
+                                
+                            }
+                            dl {
+                                margin-top:30px;
+                                dt {
+                                    font-size:25px;
+                                    font-weight:400;
+                                    margin:15px 0;
+                                }
+                                dd {
+                                    padding-left:30px;
+                                    font-size:18px;
+                                    font-weight:300;
                                 }
                             }
-                            button {
-                                margin-top:10px;
-                                width:60px;
-                                color:#050505;
-                                
+                        }
+                    }  // ===== gitDoc end =====
+                }
+                
+                .html { // ===== html =====
+                    .content {// ==== bStruct ====
+                        display:none;
+                    }
+                    .content { // ==== logIn ====
+                        display:none;
+                        .cont {
+                            margin-top:40px;
+                            display:flex;
+                            .textBox {
+                                border:none;
+                                background-color:#141414;
+                                height:400px;
+                                width:50%;
+                                color:#f2f2f2;
+                                text-align:left;
+                                box-sizing:border-box;
+                            }
+                            .frame {
+                                border:none;
+                                background-color:#757575;
+                                margin-left:20px;
+                                height:400px;
+                                width:50%;
+                                box-sizing:border-box;
                             }
                         }
                         
-                    }
-                }
-                .radio {
-                    .checkBoxGrp {
-                        display:inline-block;//이렇게해야 굳이 width 값 안넣고 안에 요소만큼 가지게 할수있음 
-                        border:1px solid #f2f2f2;
-                        padding:20px 30px;
-                        margin:60px 0;
-                    }
-                }
-                .aona {
-                    .listGrp {
-                        .newList {
-                            max-height:350px;
-                            margin:60px 0;
-                            border:1px solid #f2f2f2;
-                            padding:60px 60px;
-                            max-width:1300px;
-                            display:flex;
-                            justify-content:space-between;
-                            flex-wrap:wrap;
-                            overflow-y:auto;
-                            .items {
-                                position:relative;
-                                margin-bottom:25px;
-                                &:hover {//오른쪽 위의 옵션 아이콘과 동시에 호버가 일어나야하므로 제일 큰 li인 items에 호버를 걸어서 하나의 호버에 묶어줌
-                                    .thumb {
-                                        box-shadow: 0 10px 35px 5px rgba(1, 1, 1, 1);
-                                        transform:scale(1.1);
-                                    }
-                                    .btnOpt {
-                                        opacity:1;
-                                        top:10px;
-                                        right:0;
-                                    }
-                                    .thumb .dim {
-                                        opacity:0.8;
-
-                                    }
-                                    
-                                }
-                                .btnOpt {
-                                    position:absolute;
-                                    background-color:transparent;
-                                    top:18px;
-                                    right:18px;
-                                    z-index:1;
-                                    opacity:1;//호버했을때만 나오게하려면 0으로 주면됨
-                                    transition:all 0.3s;
-                                    i {
-                                        font-size:22px;
-                                        color:#f2f2f28c;
-                                    }
-                                }
-                                a {
-                                    
-                                    .thumb {
-                                        position:relative;
-                                        box-sizing:border-box;
-                                        overflow:hidden;
-                                        width:380px;
-                                        height:200px;
-                                        transition:all 0.3s;
-                                        @include radius(15px);
-                                        img {
-                                            width:100%;
-                                            
-                                            background-repeat:no-repeat;
-                                            background-position:center;
-                                            background-size:contain;
-                                        }
-                                        .dim {
-                                            position:absolute;
-                                            left:0;
-                                            bottom:0;
-                                            height:28px;
-                                            width:100%;
-                                            background-color:black;
-                                            opacity:0;
-                                            transition:all 0.2s;
-                                            z-index:100;
-                                            box-sizing:border-box;
-                                            padding:0 0 0 260px;//?.부모에 패딩을 줘서 위치 조절을 하는게 나은가 이님 자식요소에 마진을 줘서 위치조정하는게 나은가?
-                                            display:flex;
-                                            align-items:center;
-                                            .comment {//!.inline요소의 텍스트 세로 정렬 어려움 
-                                                // background-color:red;
-                                                position:relative;
-                                                display:block;
-                                                
-                                                i {
-                                                    font-size:15px; 
-                                                    
-                                                }
-                                            }
-                                            .view {
-                                                display:block;
-                                                // background-color:red;
-                                                margin-left:10px;
-                                                
-                                                i {
-                                                    font-size:17px;
-                                                }
-                                            }
-                                            b {
-                                                // background-color:green;
-                                                font-size:14px;
-                                            
-                                            }
-                                        }
-                                        
-                                    }
-                                    .subTitleBar {//아래 p라인이 블럭요소라 a박스를 필요이상으로 늘어나게 하기때문에 적당한 width 값으로 줄여야함
-                                        display:flex;
+                        .loginGrp {
+                            border:1px solid #8b8b8b;
+                            width:16%;
+                            padding:30px 30px;
+                            margin:50px 0;
+                            .userInfo {
+                                display:flex;
+                                justify-content:space-between;
+                                .idBox {
+                                    display:flex;
+                                    flex-wrap:wrap;
+                                    justify-content:space-between;
+                                    width:calc(100% - 100px);
+                                    label {
                                         margin-top:10px;
-                                        .dataCircle {
-                                            display:flex;
-                                            flex-direction:column;
-                                            justify-content:space-between;
-                                            padding:5px 0;
-                                            .updateCircle {
-                                                @include circle2(13px, rgb(112, 209, 112));
-                                            }
-                                            .ageCircle {
-                                                @include circle2(13px, rgb(67, 103, 133));
-                                            }
-                                        }
                                     }
-                                    
-                                    p {
-                                        color:rgb(110, 110, 110);
-                                        width:362px;
-                                        word-break:break-all;
-                                        margin-left:5px;
-                                        // background-color:black;
-                                        display:-webkit-box;
-                                        overflow:hidden;
-                                        text-overflow:ellipsis;
-                                        -webkit-line-clamp:2;
-                                        -webkit-box-orient:vertical;
-                                        
+                                    input {
+                                        width:calc(100% - 70px);
+                                        margin-top:10px;
+                                        box-sizing:border-box;
                                     }
+                                }
+                                button {
+                                    margin-top:10px;
+                                    width:60px;
+                                    color:#050505;
                                     
                                 }
                             }
+                            
                         }
+                    } // ==== login ====
+
+                    .content { // ==== radio ====
+                        display:none;
+                        .checkBoxGrp {
+                            display:inline-block;//이렇게해야 굳이 width 값 안넣고 안에 요소만큼 가지게 할수있음 
+                            border:1px solid #f2f2f2;
+                            padding:20px 30px;
+                            margin:60px 0;
+                        }
+                    } // ==== radio end ====
+
+                    .content { // ==== a on a ====
+                        display:none;
+                        .listGrp {
+                            .newList {
+                                max-height:350px;
+                                margin:60px 0;
+                                border:1px solid #f2f2f2;
+                                padding:60px 60px;
+                                max-width:1300px;
+                                display:flex;
+                                justify-content:space-between;
+                                flex-wrap:wrap;
+                                overflow-y:auto;
+                                .items {
+                                    position:relative;
+                                    margin-bottom:25px;
+                                    &:hover {//오른쪽 위의 옵션 아이콘과 동시에 호버가 일어나야하므로 제일 큰 li인 items에 호버를 걸어서 하나의 호버에 묶어줌
+                                        .thumb {
+                                            box-shadow: 0 10px 35px 5px rgba(1, 1, 1, 1);
+                                            transform:scale(1.1);
+                                        }
+                                        .btnOpt {
+                                            opacity:1;
+                                            top:10px;
+                                            right:0;
+                                        }
+                                        .thumb .dim {
+                                            opacity:0.8;
+    
+                                        }
+                                        
+                                    }
+                                    .btnOpt {
+                                        position:absolute;
+                                        background-color:transparent;
+                                        top:18px;
+                                        right:18px;
+                                        z-index:1;
+                                        opacity:1;//호버했을때만 나오게하려면 0으로 주면됨
+                                        transition:all 0.3s;
+                                        i {
+                                            font-size:22px;
+                                            color:#f2f2f28c;
+                                        }
+                                    }
+                                    a {
+                                        
+                                        .thumb {
+                                            position:relative;
+                                            box-sizing:border-box;
+                                            overflow:hidden;
+                                            width:380px;
+                                            height:200px;
+                                            transition:all 0.3s;
+                                            @include radius(15px);
+                                            img {
+                                                width:100%;
+                                                
+                                                background-repeat:no-repeat;
+                                                background-position:center;
+                                                background-size:contain;
+                                            }
+                                            .dim {
+                                                position:absolute;
+                                                left:0;
+                                                bottom:0;
+                                                height:28px;
+                                                width:100%;
+                                                background-color:black;
+                                                opacity:0;
+                                                transition:all 0.2s;
+                                                z-index:100;
+                                                box-sizing:border-box;
+                                                padding:0 0 0 260px;//?.부모에 패딩을 줘서 위치 조절을 하는게 나은가 이님 자식요소에 마진을 줘서 위치조정하는게 나은가?
+                                                display:flex;
+                                                align-items:center;
+                                                .comment {//!.inline요소의 텍스트 세로 정렬 어려움 
+                                                    // background-color:red;
+                                                    position:relative;
+                                                    display:block;
+                                                    
+                                                    i {
+                                                        font-size:15px; 
+                                                        
+                                                    }
+                                                }
+                                                .view {
+                                                    display:block;
+                                                    // background-color:red;
+                                                    margin-left:10px;
+                                                    
+                                                    i {
+                                                        font-size:17px;
+                                                    }
+                                                }
+                                                b {
+                                                    // background-color:green;
+                                                    font-size:14px;
+                                                
+                                                }
+                                            }
+                                            
+                                        }
+                                        .subTitleBar {//아래 p라인이 블럭요소라 a박스를 필요이상으로 늘어나게 하기때문에 적당한 width 값으로 줄여야함
+                                            display:flex;
+                                            margin-top:10px;
+                                            .dataCircle {
+                                                display:flex;
+                                                flex-direction:column;
+                                                justify-content:space-between;
+                                                padding:5px 0;
+                                                .updateCircle {
+                                                    @include circle2(13px, rgb(112, 209, 112));
+                                                }
+                                                .ageCircle {
+                                                    @include circle2(13px, rgb(67, 103, 133));
+                                                }
+                                            }
+                                        }
+                                        
+                                        p {
+                                            color:rgb(110, 110, 110);
+                                            width:362px;
+                                            word-break:break-all;
+                                            margin-left:5px;
+                                            // background-color:black;
+                                            display:-webkit-box;
+                                            overflow:hidden;
+                                            text-overflow:ellipsis;
+                                            -webkit-line-clamp:2;
+                                            -webkit-box-orient:vertical;
+                                            
+                                        }
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    }// ==== a on a end ====
+                }
+                .javaS {
+                    .content {
+                        display:none;
                     }
                 }
+                
+                
                  
             }
             
