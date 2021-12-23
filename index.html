@@ -702,28 +702,12 @@
         const tabLi = document.querySelectorAll('.basicHtml li')
         const htmlLi = document.querySelectorAll('.html .tabGrp')
         
-        // const javaLi = document.querySelectorAll('.javaS .tabGrp')
+        
         let activeList = htmlLi[0];
         let tabList = tabLi[0];
-        // console.log(initLi);
+        
         activeList.classList.add('active')
         console.log(htmlLi.length);
-        // console.log(javaLi);
-        // activeList.classList.add('active')
-        // console.log(initList.length)
-
-        // for(let i = 0; i <initLi.length; i++) {
-        //     initLi[i].addEventListener('click', function() {
-        //         activeList.classList.remove('active');
-        //         activeList = this;
-        //         activeList.classList.add('active');
-        //         console.log(initLi);
-        //     })
-        // }
-        
-        
-            
-        
         
 
         tabLi.forEach(function(e,idx) {//클릭할 대상은 따로 있고 active가 활성화되어 표시될건 viewGrp안의 컨텐츠이기때문에 아래처럼 activeList에 명령을 넣어준다ㅏ. for문이 아닌 forEach로 써야 해당 대상의 순번을 지정하여 명령을 실행시킬 수 있다. 
@@ -737,76 +721,7 @@
                 activeList.classList.add('active');
             })
         })
-        // for(let i = 0; i <javaList.length; i++) {
-        //     javaList[i].addEventListener('click', function() {
-        //         activeList.classList.remove('active');
-        //         activeList = this;
-        //         activeList.classList.add('active');
-        //         console.log(activeList);
-        //     })
-        // }
-        // console.log(htmlList)
-        // let set1 = document.querySelectorAll('.setting a')
-        // let set2 = document.querySelectorAll('.basicHtml a')
-        // let set3 = document.querySelectorAll('.java a')
         
-
-        // let gitTxt = document.querySelector('.gitDoc')
-        // let bStruct = document.querySelector('.bStruct')
-        // let impFont = document.querySelector('.impFont')
-        // let mainNav = document.querySelector('.mainNav')
-        // let logIn = document.querySelector('.logIn')
-        // let radio = document.querySelector('.radio')
-        // let aona = document.querySelector('.aona')
-        // let classA = document.querySelector('.classAdd')
-        // let forEach = document.querySelector('.forEach')
-        // let forEachShort = document.querySelector('.forEachShort')
-        // let ifIncludes = document.querySelector('.ifIncludes')
-
-        // set1[1].addEventListener('click', function() {
-        //     // gitTxt.classList.add('on')
-        //     gitTxt.style.display = 'block';
-        // })
-        // set2[0].addEventListener('click', function() {
-        //     // bStruct.classList.add('on')
-        //     bStruct.style.display = 'block';
-        // })
-        // set2[1].addEventListener('click', function() {
-        //     // bStruct.classList.add('on')
-        //     impFont.style.display = 'block';
-        // })
-        // set2[3].addEventListener('click', function() {
-        //     // bStruct.classList.add('on')
-        //     mainNav.style.display = 'block';
-        // })
-        // set2[4].addEventListener('click', function() {
-        //     // bStruct.classList.add('on')
-        //     logIn.style.display = 'block';
-        // })
-        // set2[6].addEventListener('click', function() {
-        //     // bStruct.classList.add('on')
-        //     radio.style.display = 'block';
-        // })
-        // set2[8].addEventListener('click', function() {
-        //     // bStruct.classList.add('on')
-        //     aona.style.display = 'block';
-        // })
-        // set3[0].addEventListener('click', function() {
-        //     // bStruct.classList.add('on')
-        //     classA.style.display = 'block';
-        // })
-        // set3[1].addEventListener('click', function() {
-        //     // bStruct.classList.add('on')
-        //     forEach.style.display = 'block';
-        // })
-        // set3[2].addEventListener('click', function() {
-        //     // bStruct.classList.add('on')
-        //     forEachShort.style.display = 'block';
-        // })
-        // set3[3].addEventListener('click', function() {
-        //     // bStruct.classList.add('on')
-        //     ifIncludes.style.display = 'block';
-        // })
     </script>
 </body>
 </html>
